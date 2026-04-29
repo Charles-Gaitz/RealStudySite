@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Study Hub</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=DM+Mono:wght@400;500&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+:root{--bg:#0c0c0f;--bg2:#141418;--bg3:#1c1c22;--bg4:#242429;--border:rgba(255,255,255,0.07);--border2:rgba(255,255,255,0.13);--text:#eaeaf0;--text2:#9494a6;--text3:#52525e;--accent:#c8b8ff;--accent2:#8b6cff;--gold:#f5c842;--teal:#4ecdc4;--coral:#ff6b6b;--green:#69db7c;--blue:#74c0fc;--orange:#ffa94d;--r:12px;--r-lg:20px;}
+html{scroll-behavior:smooth;}
+body{background:var(--bg);color:var(--text);font-family:'DM Sans',sans-serif;font-size:15px;line-height:1.6;min-height:100vh;overflow-x:hidden;}
+.ambient{position:fixed;inset:0;pointer-events:none;z-index:0;overflow:hidden;}
+.ab{position:absolute;border-radius:50%;filter:blur(120px);opacity:0.1;}
+.ab1{width:600px;height:600px;background:var(--accent2);top:-200px;left:-100px;animation:d1 18s ease-in-out infinite;}
+.ab2{width:400px;height:400px;background:var(--teal);bottom:-100px;right:-50px;animation:d2 22s ease-in-out infinite;}
+.ab3{width:300px;height:300px;background:var(--gold);top:40%;left:50%;transform:translate(-50%,-50%);animation:d3 15s ease-in-out infinite;}
+@keyframes d1{0%,100%{transform:translate(0,0) scale(1)}50%{transform:translate(60px,40px) scale(1.1)}}
+@keyframes d2{0%,100%{transform:translate(0,0) scale(1)}50%{transform:translate(-40px,-60px) scale(1.08)}}
+@keyframes d3{0%,100%{transform:translate(-50%,-50%) scale(1)}50%{transform:translate(-50%,-50%) scale(1.15)}}
+@keyframes pulse{0%,100%{opacity:.7;transform:scale(1)}50%{opacity:1;transform:scale(1.3)}}
+.page{position:relative;z-index:1;max-width:1100px;margin:0 auto;padding:0 2rem;}
+header{padding:4.5rem 0 3rem;text-align:center;}
+.kicker{display:inline-flex;align-items:center;gap:8px;font-family:'DM Mono',monospace;font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:var(--text3);margin-bottom:1.5rem;}
+.kdot{width:6px;height:6px;border-radius:50%;background:var(--accent);opacity:0.7;animation:pulse 2s ease-in-out infinite;}
+h1{font-family:'Instrument Serif',serif;font-size:clamp(3rem,7vw,5.5rem);font-weight:400;line-height:1.05;letter-spacing:-.02em;margin-bottom:1.2rem;}
+h1 em{color:var(--accent);font-style:italic;}
+.hsub{font-size:16px;color:var(--text2);max-width:480px;margin:0 auto 3rem;line-height:1.7;}
+.tsw{display:flex;align-items:center;justify-content:center;gap:4px;background:var(--bg2);border:1px solid var(--border);border-radius:100px;padding:4px;width:fit-content;margin:0 auto 3rem;}
+.tsb{font-size:13px;font-weight:500;padding:8px 22px;border-radius:100px;border:none;background:transparent;color:var(--text2);cursor:pointer;font-family:'DM Sans',sans-serif;transition:all .2s;display:flex;align-items:center;gap:7px;white-space:nowrap;}
+.tsb:hover{color:var(--text);}
+.tsb.active{background:var(--bg3);color:var(--text);box-shadow:0 1px 3px rgba(0,0,0,.4);}
+.tcnt{font-family:'DM Mono',monospace;font-size:10px;padding:2px 7px;border-radius:10px;background:var(--bg4);color:var(--text3);}
+.tsb.active .tcnt{background:rgba(200,184,255,.12);color:var(--accent);}
+.tpanel{display:none;}
+.tpanel.active{display:block;}
+.controls{display:flex;align-items:center;gap:12px;max-width:620px;margin:0 auto 3rem;flex-wrap:wrap;justify-content:center;}
+.sw{flex:1;min-width:220px;position:relative;}
+.si{position:absolute;left:14px;top:50%;transform:translateY(-50%);color:var(--text3);font-size:14px;pointer-events:none;}
+.sinput{width:100%;padding:10px 14px 10px 38px;background:var(--bg2);border:1px solid var(--border2);border-radius:100px;color:var(--text);font-family:'DM Sans',sans-serif;font-size:14px;outline:none;transition:border-color .2s,box-shadow .2s;}
+.sinput::placeholder{color:var(--text3);}
+.sinput:focus{border-color:var(--accent2);box-shadow:0 0 0 3px rgba(139,108,255,.12);}
+.fg{display:flex;gap:6px;flex-wrap:wrap;}
+.fp{font-size:12px;padding:6px 14px;border-radius:100px;border:1px solid var(--border2);background:transparent;color:var(--text2);cursor:pointer;font-family:'DM Sans',sans-serif;transition:all .15s;}
+.fp:hover{background:var(--bg3);color:var(--text);}
+.fp.active{background:rgba(139,108,255,.15);border-color:rgba(139,108,255,.4);color:var(--accent);font-weight:500;}
+.sbar{display:flex;align-items:center;gap:24px;max-width:620px;margin:0 auto 3rem;padding:0 4px;}
+.sn{font-family:'DM Mono',monospace;font-size:20px;font-weight:500;color:var(--text);}
+.sl{font-size:12px;color:var(--text3);}
+.sdiv{width:1px;height:20px;background:var(--border2);}
+.rc{font-family:'DM Mono',monospace;font-size:11px;color:var(--text3);}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:16px;margin-bottom:5rem;}
+.card{background:var(--bg2);border:1px solid var(--border);border-radius:var(--r-lg);padding:1.6rem;cursor:pointer;text-decoration:none;display:block;position:relative;overflow:hidden;transition:transform .2s,border-color .2s,box-shadow .2s;}
+.card::before{content:'';position:absolute;inset:0;border-radius:var(--r-lg);background:linear-gradient(135deg,rgba(255,255,255,.03) 0%,transparent 60%);pointer-events:none;}
+.card:hover{transform:translateY(-3px);border-color:var(--border2);box-shadow:0 12px 40px rgba(0,0,0,.4);}
+.card:hover .carr{transform:translate(3px,-3px);opacity:1;}
+.card:hover .cglow{opacity:1;}
+.cglow{position:absolute;top:-60px;right:-60px;width:180px;height:180px;border-radius:50%;filter:blur(50px);opacity:0;transition:opacity .3s;pointer-events:none;}
+.ctop{display:flex;align-items:flex-start;justify-content:space-between;margin-bottom:1rem;}
+.cicon{width:42px;height:42px;border-radius:10px;display:flex;align-items:center;justify-content:center;font-size:20px;flex-shrink:0;}
+.carr{font-size:18px;color:var(--text3);transition:transform .2s,opacity .2s;opacity:0.4;}
+.cco{font-family:'DM Mono',monospace;font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--text3);margin-bottom:5px;}
+.ctitle{font-family:'Instrument Serif',serif;font-size:1.35rem;font-weight:400;color:var(--text);line-height:1.25;margin-bottom:8px;}
+.cdesc{font-size:13px;color:var(--text2);line-height:1.6;margin-bottom:1.1rem;}
+.cfoot{display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:8px;}
+.ctags{display:flex;gap:5px;flex-wrap:wrap;}
+.tag{font-size:11px;padding:3px 9px;border-radius:100px;border:1px solid var(--border2);color:var(--text3);font-family:'DM Mono',monospace;}
+.cmeta{font-size:11px;color:var(--text3);font-family:'DM Mono',monospace;}
+.ebadge{display:inline-flex;align-items:center;gap:5px;font-size:11px;font-family:'DM Mono',monospace;padding:3px 9px;border-radius:100px;background:rgba(245,200,66,.1);color:var(--gold);border:1px solid rgba(245,200,66,.2);margin-bottom:8px;}
+.card-purple .cicon{background:rgba(139,108,255,.15);color:var(--accent);}.card-purple .cglow{background:var(--accent2);}.card-purple:hover{border-color:rgba(139,108,255,.25);}
+.card-teal .cicon{background:rgba(78,205,196,.15);color:var(--teal);}.card-teal .cglow{background:var(--teal);}.card-teal:hover{border-color:rgba(78,205,196,.25);}
+.card-gold .cicon{background:rgba(245,200,66,.12);color:var(--gold);}.card-gold .cglow{background:var(--gold);}.card-gold:hover{border-color:rgba(245,200,66,.2);}
+.card-coral .cicon{background:rgba(255,107,107,.12);color:var(--coral);}.card-coral .cglow{background:var(--coral);}.card-coral:hover{border-color:rgba(255,107,107,.2);}
+.card-blue .cicon{background:rgba(116,192,252,.12);color:var(--blue);}.card-blue .cglow{background:var(--blue);}.card-blue:hover{border-color:rgba(116,192,252,.2);}
+.card-green .cicon{background:rgba(105,219,124,.12);color:var(--green);}.card-green .cglow{background:var(--green);}.card-green:hover{border-color:rgba(105,219,124,.2);}
+.card-orange .cicon{background:rgba(255,169,77,.12);color:var(--orange);}.card-orange .cglow{background:var(--orange);}.card-orange:hover{border-color:rgba(255,169,77,.2);}
+.card-add{background:transparent;border:1px dashed var(--border2);border-radius:var(--r-lg);padding:1.6rem;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;gap:10px;min-height:200px;transition:border-color .2s,background .2s;cursor:default;}
+.card-add:hover{border-color:var(--border2);background:var(--bg2);}
+.aico{font-size:1.5rem;opacity:.25;}
+.atxt{font-size:13px;color:var(--text3);}
+.acod{font-family:'DM Mono',monospace;font-size:11px;background:var(--bg3);border:1px solid var(--border);border-radius:6px;padding:4px 10px;color:var(--text3);}
+.empty-state{grid-column:1/-1;text-align:center;padding:4rem 2rem;display:none;}
+.empty-state.visible{display:block;}
+.eico{font-size:2.5rem;margin-bottom:1rem;opacity:.4;}
+.etitle{font-family:'Instrument Serif',serif;font-size:1.5rem;color:var(--text2);margin-bottom:6px;}
+.esub{font-size:13px;color:var(--text3);}
+footer{border-top:1px solid var(--border);padding:2rem 0;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:10px;}
+.fl{font-family:'DM Mono',monospace;font-size:11px;color:var(--text3);}
+.fr{font-family:'DM Mono',monospace;font-size:11px;color:var(--text3);}
+.fr a{color:var(--text3);text-decoration:none;}
+.fr a:hover{color:var(--text2);}
+@media(max-width:600px){header{padding:3rem 0 2.5rem;}h1{font-size:2.5rem;}}
+::-webkit-scrollbar{width:6px;}::-webkit-scrollbar-track{background:transparent;}::-webkit-scrollbar-thumb{background:var(--bg4);border-radius:3px;}
+</style>
+</head>
+<body>
+<div class="ambient"><div class="ab ab1"></div><div class="ab ab2"></div><div class="ab ab3"></div></div>
+<div class="page">
+  <header>
+    <div class="kicker"><div class="kdot"></div>Texas A&amp;M University</div>
+    <h1>Study <em>Hub</em></h1>
+    <p class="hsub">All your class study guides and practice exams in one place. Pick a course and start reviewing.</p>
+    <div class="tsw">
+      <button class="tsb active" id="tbg" onclick="switchTab('guides')"><span>📚</span> Study Guides <span class="tcnt" id="gcnt">0</span></button>
+      <button class="tsb" id="tbe" onclick="switchTab('exams')"><span>📝</span> Practice Exams <span class="tcnt" id="ecnt">0</span></button>
+    </div>
+  </header>
+
+  <div class="tpanel active" id="pg">
+    <div class="controls">
+      <div class="sw"><span class="si">⌕</span><input class="sinput" id="gs" type="text" placeholder="Search guides…" oninput="fc('guides')" autocomplete="off"></div>
+      <div class="fg" id="gfg"><button class="fp active" onclick="sf('guides','all',this)">All</button></div>
+    </div>
+    <div class="sbar">
+      <div><span class="sn" id="sg">0</span> <span class="sl">guides</span></div><div class="sdiv"></div>
+      <div><span class="sn" id="sgs">0</span> <span class="sl">subjects</span></div><div class="sdiv"></div>
+      <span class="rc" id="grc"></span>
+    </div>
+    <div class="grid" id="gg"><div class="empty-state" id="ge"><div class="eico">◎</div><div class="etitle">No guides found</div><div class="esub">Try a different search</div></div></div>
+  </div>
+
+  <div class="tpanel" id="pe">
+    <div class="controls">
+      <div class="sw"><span class="si">⌕</span><input class="sinput" id="es" type="text" placeholder="Search exams…" oninput="fc('exams')" autocomplete="off"></div>
+      <div class="fg" id="efg"><button class="fp active" onclick="sf('exams','all',this)">All</button></div>
+    </div>
+    <div class="sbar">
+      <div><span class="sn" id="se">0</span> <span class="sl">exams</span></div><div class="sdiv"></div>
+      <div><span class="sn" id="seq">0</span> <span class="sl">total questions</span></div><div class="sdiv"></div>
+      <span class="rc" id="erc"></span>
+    </div>
+    <div class="grid" id="eg"><div class="empty-state" id="ee"><div class="eico">◎</div><div class="etitle">No exams found</div><div class="esub">Try a different search</div></div></div>
+  </div>
+
+  <footer>
+    <span class="fl">Study Hub &middot; Texas A&amp;M</span>
+    <span class="fr"><a href="https://github.com/Charles-Gaitz/CE-Study-Site" target="_blank">GitHub</a> &nbsp;&middot;&nbsp; Netlify</span>
+  </footer>
+</div>
+<script>
+const GUIDES=[
+  {id:"audit407",course:"ACCT 407",title:"Audit & Assurance",desc:"Full coverage of auditing standards, risk, ICFR, sampling, ethics, and reporting — with interactive calculators and a 28-question quiz.",file:"guides/audit407.html",icon:"🔍",color:"purple",tags:["15 sections","28 questions","calculators"],subject:"Accounting",updated:"Apr 2025"},
+  {id:"mgmt312",course:"MGMT 312",title:"Commercial Law Exam 3",desc:"Bankruptcy, Agency, Partnerships, LLCs, Corporations, and Directors & Officers — comparison charts, 40-question quiz, and rapid-review cram sheet.",file:"guides/mgmt312.html",icon:"⚖️",color:"blue",tags:["11 sections","40 questions","comparison charts"],subject:"Business Law",updated:"Apr 2025"},
+  // ADD GUIDE: {id:"",course:"",title:"",desc:"",file:"guides/.html",icon:"📈",color:"teal",tags:[],subject:"",updated:""},
+];
+const EXAMS=[
+  {id:"acct407_exam",course:"ACCT 407",title:"Audit & Assurance — Full Exam",desc:"220 CPA-style questions covering all chapters. Immediate feedback with full explanations. Filter by topic or difficulty. Progress saved automatically.",file:"exams/acct407_exam.html",icon:"🔍",color:"purple",tags:["220 questions","15 topics","3 difficulty levels","saves progress"],subject:"Accounting",questions:220,updated:"Apr 2025"},
+  // ADD EXAM: {id:"",course:"",title:"",desc:"",file:"exams/.html",icon:"",color:"",tags:[],subject:"",questions:0,updated:""},
+];
+let agf='all',aef='all';
+function switchTab(t){
+  document.getElementById('pg').classList.toggle('active',t==='guides');
+  document.getElementById('pe').classList.toggle('active',t==='exams');
+  document.getElementById('tbg').classList.toggle('active',t==='guides');
+  document.getElementById('tbe').classList.toggle('active',t==='exams');
+}
+function buildPills(type,items){
+  const subjects=[...new Set(items.map(i=>i.subject))].sort();
+  const gid=type==='guides'?'gfg':'efg';
+  document.getElementById(gid).querySelectorAll('.dp').forEach(b=>b.remove());
+  subjects.forEach(s=>{const b=document.createElement('button');b.className='fp dp';b.textContent=s;b.onclick=()=>sf(type,s,b);document.getElementById(gid).appendChild(b);});
+}
+function sf(type,sub,btn){
+  const gid=type==='guides'?'gfg':'efg';
+  document.getElementById(gid).querySelectorAll('.fp').forEach(b=>b.classList.remove('active'));
+  btn.classList.add('active');
+  if(type==='guides')agf=sub;else aef=sub;
+  fc(type);
+}
+function fc(type){
+  const ig=type==='guides';
+  const items=ig?GUIDES:EXAMS;
+  const q=document.getElementById(ig?'gs':'es').value.toLowerCase().trim();
+  const af=ig?agf:aef;
+  const filtered=items.filter(i=>(af==='all'||i.subject===af)&&(!q||i.course.toLowerCase().includes(q)||i.title.toLowerCase().includes(q)||i.desc.toLowerCase().includes(q)||i.tags.some(t=>t.toLowerCase().includes(q))));
+  render(type,filtered);
+}
+function render(type,items){
+  const ig=type==='guides';
+  const grid=document.getElementById(ig?'gg':'eg');
+  const empty=document.getElementById(ig?'ge':'ee');
+  grid.querySelectorAll('a.card,.card-add').forEach(e=>e.remove());
+  if(!items.length){empty.classList.add('visible');return;}
+  empty.classList.remove('visible');
+  items.forEach(item=>{
+    const a=document.createElement('a');
+    a.href=item.file;a.className=`card card-${item.color}`;
+    const tags=item.tags.map(t=>`<span class="tag">${t}</span>`).join('');
+    if(ig){
+      a.innerHTML=`<div class="cglow"></div><div class="ctop"><div class="cicon">${item.icon}</div><span class="carr">↗</span></div><div class="cco">${item.course}</div><div class="ctitle">${item.title}</div><div class="cdesc">${item.desc}</div><div class="cfoot"><div class="ctags">${tags}</div><div class="cmeta">Updated ${item.updated}</div></div>`;
+    }else{
+      a.innerHTML=`<div class="cglow"></div><div class="ctop"><div class="cicon">${item.icon}</div><span class="carr">↗</span></div><div class="ebadge">📝 Practice Exam</div><div class="cco">${item.course}</div><div class="ctitle">${item.title}</div><div class="cdesc">${item.desc}</div><div class="cfoot"><div class="ctags">${tags}</div><div class="cmeta">Updated ${item.updated}</div></div>`;
+    }
+    grid.insertBefore(a,empty);
+  });
+  const add=document.createElement('div');add.className='card-add';
+  add.innerHTML=ig?`<div class="aico">+</div><div class="atxt">Add a new guide</div><div class="acod">guides/course.html</div>`:`<div class="aico">+</div><div class="atxt">Add a new exam</div><div class="acod">exams/exam.html</div>`;
+  grid.insertBefore(add,empty);
+  if(ig){
+    document.getElementById('sg').textContent=GUIDES.length;
+    document.getElementById('sgs').textContent=new Set(GUIDES.map(g=>g.subject)).size;
+    document.getElementById('grc').textContent=items.length<GUIDES.length?`${items.length} shown`:'';
+  }else{
+    document.getElementById('se').textContent=EXAMS.length;
+    document.getElementById('seq').textContent=EXAMS.reduce((s,e)=>s+(e.questions||0),0).toLocaleString();
+    document.getElementById('erc').textContent=items.length<EXAMS.length?`${items.length} shown`:'';
+  }
+}
+document.getElementById('gcnt').textContent=GUIDES.length;
+document.getElementById('ecnt').textContent=EXAMS.length;
+buildPills('guides',GUIDES);buildPills('exams',EXAMS);
+fc('guides');fc('exams');
+</script>
+</body>
+</html>

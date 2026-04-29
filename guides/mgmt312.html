@@ -1,0 +1,893 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>MGMT 312 — Commercial Law Exam 3 Study Guide</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=DM+Mono:wght@400;500&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#0f0f11;--bg2:#17171a;--bg3:#1e1e23;--bg4:#26262d;--border:rgba(255,255,255,0.08);--border2:rgba(255,255,255,0.14);--text:#e8e8ed;--text2:#9898a8;--text3:#5e5e6e;--accent:#c8b8ff;--accent2:#8b6cff;--gold:#f5c842;--teal:#4ecdc4;--coral:#ff6b6b;--green:#69db7c;--blue:#74c0fc;--orange:#ffa94d;--radius:10px;--radius-lg:16px;}
+*{box-sizing:border-box;margin:0;padding:0;}
+body{background:var(--bg);color:var(--text);font-family:'DM Sans',sans-serif;font-size:15px;line-height:1.65;min-height:100vh;}
+.site-header{padding:3rem 0 2rem;text-align:center;border-bottom:1px solid var(--border);background:linear-gradient(180deg,#0e1520 0%,var(--bg) 100%);position:relative;overflow:hidden;}
+.site-header::before{content:'';position:absolute;top:-80px;left:50%;transform:translateX(-50%);width:600px;height:300px;background:radial-gradient(ellipse,rgba(116,192,252,0.14) 0%,transparent 70%);pointer-events:none;}
+.header-kicker{font-family:'DM Mono',monospace;font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:var(--blue);margin-bottom:12px;}
+.header-title{font-family:'Instrument Serif',serif;font-size:clamp(2.2rem,5vw,3.8rem);font-weight:400;color:var(--text);line-height:1.1;margin-bottom:10px;}
+.header-title em{color:var(--blue);font-style:italic;}
+.header-sub{font-size:14px;color:var(--text2);max-width:500px;margin:0 auto;}
+.layout{display:flex;max-width:1200px;margin:0 auto;padding:0 1.5rem;gap:0;}
+.sidebar{width:230px;flex-shrink:0;position:sticky;top:0;height:100vh;overflow-y:auto;padding:1.5rem 1rem 2rem 0;border-right:1px solid var(--border);scrollbar-width:none;}
+.sidebar::-webkit-scrollbar{display:none;}
+.sidebar-label{font-family:'DM Mono',monospace;font-size:10px;letter-spacing:.15em;text-transform:uppercase;color:var(--text3);padding:0 10px;margin-bottom:6px;margin-top:18px;}
+.sidebar-label:first-child{margin-top:0;}
+.nav-btn{display:block;width:100%;text-align:left;padding:7px 10px;border-radius:8px;border:none;background:transparent;color:var(--text2);font-family:'DM Sans',sans-serif;font-size:13px;cursor:pointer;transition:all .15s;margin-bottom:2px;}
+.nav-btn:hover{background:var(--bg3);color:var(--text);}
+.nav-btn.active{background:rgba(116,192,252,0.12);color:var(--blue);font-weight:500;}
+.main{flex:1;padding:2.5rem 2rem 4rem;min-width:0;}
+.section{display:none;}
+.section.active{display:block;}
+h2{font-family:'Instrument Serif',serif;font-size:2rem;font-weight:400;color:var(--text);margin-bottom:6px;line-height:1.2;}
+h3{font-size:12px;font-weight:600;color:var(--text2);text-transform:uppercase;letter-spacing:.08em;margin:1.8rem 0 .7rem;padding-bottom:6px;border-bottom:1px solid var(--border);}
+.section-intro{color:var(--text2);font-size:14px;margin-bottom:1.5rem;max-width:700px;}
+.card{background:var(--bg2);border:1px solid var(--border);border-radius:var(--radius);padding:.9rem 1.1rem;margin-bottom:.6rem;}
+.card strong{color:var(--text);font-weight:600;display:block;margin-bottom:4px;font-size:13px;}
+.card p,.card li{font-size:13px;color:var(--text2);}
+.card ul{padding-left:1.1rem;}
+.card li{margin-bottom:2px;}
+.card-blue{border-left:3px solid var(--blue);}
+.card-teal{border-left:3px solid var(--teal);}
+.card-coral{border-left:3px solid var(--coral);}
+.card-gold{border-left:3px solid var(--gold);}
+.card-green{border-left:3px solid var(--green);}
+.card-purple{border-left:3px solid var(--accent);}
+.card-orange{border-left:3px solid var(--orange);}
+.callout{background:rgba(116,192,252,0.07);border:1px solid rgba(116,192,252,0.2);border-radius:var(--radius);padding:10px 14px;margin:10px 0;font-size:13px;color:var(--blue);}
+.callout strong{color:var(--blue);}
+.warn{background:rgba(255,169,77,0.07);border:1px solid rgba(255,169,77,0.2);border-radius:var(--radius);padding:10px 14px;margin:10px 0;font-size:13px;color:var(--orange);}
+.warn strong{color:var(--orange);}
+.danger{background:rgba(255,107,107,0.07);border:1px solid rgba(255,107,107,0.2);border-radius:var(--radius);padding:10px 14px;margin:10px 0;font-size:13px;color:var(--coral);}
+.danger strong{color:var(--coral);}
+.success{background:rgba(105,219,124,0.07);border:1px solid rgba(105,219,124,0.2);border-radius:var(--radius);padding:10px 14px;margin:10px 0;font-size:13px;color:var(--green);}
+.success strong{color:var(--green);}
+.grid2{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin:8px 0;}
+.grid3{display:grid;grid-template-columns:1fr 1fr 1fr;gap:10px;margin:8px 0;}
+.tbl-wrap{overflow-x:auto;margin:8px 0;border-radius:var(--radius);border:1px solid var(--border);}
+table{width:100%;border-collapse:collapse;font-size:13px;}
+th{background:var(--bg3);text-align:left;font-weight:600;color:var(--text2);padding:8px 12px;font-size:11px;text-transform:uppercase;letter-spacing:.06em;white-space:nowrap;}
+td{padding:8px 12px;color:var(--text2);border-top:1px solid var(--border);vertical-align:top;}
+tr:first-child td{border-top:none;}
+.formula{font-family:'DM Mono',monospace;font-size:14px;background:var(--bg3);border:1px solid var(--border2);border-radius:var(--radius);padding:12px 16px;margin:10px 0;color:var(--blue);text-align:center;}
+.badge{display:inline-block;font-size:11px;font-weight:600;padding:2px 8px;border-radius:20px;font-family:'DM Mono',monospace;letter-spacing:.04em;}
+.b-green{background:rgba(105,219,124,.15);color:var(--green);}
+.b-gold{background:rgba(245,200,66,.15);color:var(--gold);}
+.b-red{background:rgba(255,107,107,.15);color:var(--coral);}
+.b-blue{background:rgba(116,192,252,.15);color:var(--blue);}
+.b-purple{background:rgba(200,184,255,.15);color:var(--accent);}
+.b-orange{background:rgba(255,169,77,.15);color:var(--orange);}
+.b-teal{background:rgba(78,205,196,.15);color:var(--teal);}
+.flow-step{display:flex;align-items:flex-start;gap:12px;margin-bottom:14px;}
+.step-num{width:26px;height:26px;border-radius:50%;background:rgba(116,192,252,.18);color:var(--blue);font-size:12px;font-weight:600;display:flex;align-items:center;justify-content:center;flex-shrink:0;margin-top:1px;font-family:'DM Mono',monospace;}
+.step-body .title{font-size:13px;font-weight:600;color:var(--text);}
+.step-body .desc{font-size:12px;color:var(--text2);margin-top:2px;}
+.tab-row{display:flex;gap:4px;margin-bottom:12px;flex-wrap:wrap;}
+.tab-btn{font-size:12px;padding:5px 14px;border-radius:20px;border:1px solid var(--border2);background:transparent;color:var(--text2);cursor:pointer;font-family:'DM Sans',sans-serif;transition:all .15s;}
+.tab-btn:hover{background:var(--bg3);color:var(--text);}
+.tab-btn.on{background:rgba(116,192,252,.12);border-color:rgba(116,192,252,.35);color:var(--blue);font-weight:500;}
+.sub-section{display:none;}
+.sub-section.on{display:block;}
+.quiz-block{margin-bottom:1.8rem;padding-bottom:1.8rem;border-bottom:1px solid var(--border);}
+.quiz-block:last-child{border-bottom:none;}
+.quiz-num{font-family:'DM Mono',monospace;font-size:11px;color:var(--text3);margin-bottom:6px;text-transform:uppercase;letter-spacing:.1em;}
+.quiz-q{font-size:14px;color:var(--text);font-weight:500;margin-bottom:10px;line-height:1.5;}
+.quiz-opt{display:block;width:100%;text-align:left;background:var(--bg2);border:1px solid var(--border);border-radius:8px;padding:9px 14px;margin-bottom:6px;font-size:13px;color:var(--text2);cursor:pointer;transition:all .15s;font-family:'DM Sans',sans-serif;}
+.quiz-opt:hover{background:var(--bg3);border-color:var(--border2);color:var(--text);}
+.quiz-opt.correct{background:rgba(105,219,124,.1);border-color:rgba(105,219,124,.4);color:var(--green);}
+.quiz-opt.wrong{background:rgba(255,107,107,.1);border-color:rgba(255,107,107,.4);color:var(--coral);}
+.quiz-explain{font-size:13px;color:var(--text2);background:var(--bg3);border-radius:8px;padding:10px 14px;margin-top:8px;display:none;border-left:3px solid var(--blue);line-height:1.6;}
+.quiz-filter{display:flex;gap:6px;margin-bottom:16px;flex-wrap:wrap;}
+.filter-btn{font-size:12px;padding:4px 12px;border-radius:14px;border:1px solid var(--border2);background:transparent;color:var(--text2);cursor:pointer;font-family:'DM Sans',sans-serif;transition:all .15s;}
+.filter-btn:hover{background:var(--bg3);}
+.filter-btn.active{background:rgba(116,192,252,.12);border-color:rgba(116,192,252,.35);color:var(--blue);}
+.quiz-score-bar{font-family:'DM Mono',monospace;font-size:13px;color:var(--text3);margin-bottom:16px;}
+.quiz-score-bar span{color:var(--blue);font-weight:600;}
+ul.std{padding-left:1.2rem;margin-top:6px;}
+ul.std li{font-size:13px;color:var(--text2);margin-bottom:4px;}
+ul.std li strong{color:var(--text);}
+.priority-list{counter-reset:plist;}
+.priority-item{display:flex;gap:12px;margin-bottom:8px;align-items:flex-start;}
+.priority-num{width:28px;height:28px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-family:'DM Mono',monospace;font-size:12px;font-weight:600;flex-shrink:0;}
+.p-secured{background:rgba(245,200,66,.15);color:var(--gold);}
+.p-priority{background:rgba(116,192,252,.15);color:var(--blue);}
+.p-general{background:rgba(200,184,255,.15);color:var(--accent);}
+.p-equity{background:rgba(105,219,124,.15);color:var(--green);}
+.priority-body{font-size:13px;color:var(--text2);padding-top:4px;}
+.priority-body strong{color:var(--text);}
+.memory-box{background:var(--bg3);border:1px solid var(--border2);border-radius:var(--radius);padding:12px 16px;margin:10px 0;}
+.memory-box .mnemonic{font-family:'DM Mono',monospace;font-size:18px;font-weight:600;color:var(--blue);letter-spacing:.1em;margin-bottom:6px;}
+.memory-box .breakdown{font-size:12px;color:var(--text2);}
+.memory-box .breakdown span{color:var(--text);font-weight:500;}
+.cram-item{display:flex;gap:10px;align-items:flex-start;padding:8px 0;border-bottom:1px solid var(--border);}
+.cram-item:last-child{border-bottom:none;}
+.cram-num{font-family:'DM Mono',monospace;font-size:11px;color:var(--text3);width:28px;flex-shrink:0;padding-top:2px;}
+.cram-text{font-size:13px;color:var(--text2);}
+.cram-text strong{color:var(--text);}
+.trap-card{background:rgba(255,107,107,0.05);border:1px solid rgba(255,107,107,0.15);border-radius:var(--radius);padding:10px 14px;margin-bottom:8px;}
+.trap-card .trap-title{font-size:12px;font-weight:600;color:var(--coral);font-family:'DM Mono',monospace;text-transform:uppercase;letter-spacing:.05em;margin-bottom:4px;}
+.trap-card p{font-size:13px;color:var(--text2);}
+.scenario-box{background:rgba(116,192,252,0.04);border:1px solid rgba(116,192,252,0.15);border-radius:var(--radius);padding:12px 16px;margin:10px 0;}
+.scenario-box .s-label{font-size:11px;font-family:'DM Mono',monospace;text-transform:uppercase;letter-spacing:.1em;color:var(--blue);margin-bottom:6px;}
+.scenario-box p{font-size:13px;color:var(--text2);margin-bottom:6px;}
+.scenario-box .s-answer{font-size:12px;color:var(--green);font-weight:500;}
+.glossary-item{display:flex;gap:12px;padding:7px 0;border-bottom:1px solid var(--border);}
+.glossary-item:last-child{border-bottom:none;}
+.glossary-term{font-family:'DM Mono',monospace;font-size:12px;font-weight:500;color:var(--text);min-width:160px;flex-shrink:0;}
+.glossary-def{font-size:13px;color:var(--text2);}
+.exam-tag{display:inline-block;font-size:10px;padding:2px 7px;border-radius:10px;font-family:'DM Mono',monospace;background:rgba(245,200,66,.12);color:var(--gold);font-weight:600;margin-left:6px;vertical-align:middle;}
+@media(max-width:700px){.grid2,.grid3{grid-template-columns:1fr;}.layout{flex-direction:column;}.sidebar{width:100%;height:auto;position:relative;border-right:none;border-bottom:1px solid var(--border);padding:1rem 0;display:flex;flex-wrap:wrap;gap:4px;}.sidebar-label{display:none;}.nav-btn{width:auto;display:inline-block;}}
+.site-footer{text-align:center;padding:2rem;border-top:1px solid var(--border);font-size:12px;color:var(--text3);font-family:'DM Mono',monospace;}
+::-webkit-scrollbar{width:6px;}::-webkit-scrollbar-track{background:transparent;}::-webkit-scrollbar-thumb{background:var(--bg4);border-radius:3px;}
+</style>
+</head>
+<body>
+<header class="site-header">
+  <div class="header-kicker">Texas A&amp;M &middot; MGMT 312</div>
+  <h1 class="header-title">Commercial Law <em>Exam 3</em></h1>
+  <p class="header-sub">Chapters 31&ndash;32 &amp; 37&ndash;40 &middot; Prof. McDonald &middot; Spring 2026 &middot; 53 questions &middot; 75 min</p>
+</header>
+<div class="layout">
+<nav class="sidebar">
+  <div class="sidebar-label">Overview</div>
+  <button class="nav-btn active" onclick="show('overview',this)">Exam Overview</button>
+  <button class="nav-btn" onclick="show('rapid',this)">&#9889; Rapid Review</button>
+  <div class="sidebar-label">Chapters</div>
+  <button class="nav-btn" onclick="show('ch31',this)">Ch 31 Bankruptcy</button>
+  <button class="nav-btn" onclick="show('ch32',this)">Ch 32 Agency</button>
+  <button class="nav-btn" onclick="show('ch37',this)">Ch 37 Partnerships</button>
+  <button class="nav-btn" onclick="show('ch38',this)">Ch 38 LLCs</button>
+  <button class="nav-btn" onclick="show('ch39',this)">Ch 39 Corporations</button>
+  <button class="nav-btn" onclick="show('ch40',this)">Ch 40 Directors &amp; Officers</button>
+  <div class="sidebar-label">Reference</div>
+  <button class="nav-btn" onclick="show('terms',this)">Key Terms A&ndash;Z</button>
+  <button class="nav-btn" onclick="show('charts',this)">Comparison Charts</button>
+  <div class="sidebar-label">Practice</div>
+  <button class="nav-btn" onclick="show('quiz',this)">Practice Quiz (40 Qs)</button>
+</nav>
+<main class="main">
+
+<!-- ══ EXAM OVERVIEW ══ -->
+<div class="section active" id="s-overview">
+  <h2>Exam 3 Overview</h2>
+  <p class="section-intro">Professor McDonald's Exam 3 covers Commercial Law &mdash; business organizations and bankruptcy. Know the rules cold, then apply them to fact patterns.</p>
+  <h3>Exam Structure</h3>
+  <div class="grid3">
+    <div class="card card-blue"><strong>53 Questions</strong><p>2 points each = 106 points possible. Up to 6 bonus points available.</p></div>
+    <div class="card card-gold"><strong>~70% Multiple Choice / ~30% True-False</strong><p>Questions proportional to class time. Ch 31 is slightly larger (covered over 2 days).</p></div>
+    <div class="card card-teal"><strong>75 Minutes</strong><p>&asymp;85 seconds per question. Skip and return. Don&rsquo;t overthink T/F. Trust your first well-reasoned choice.</p></div>
+  </div>
+  <h3>Chapters Covered</h3>
+  <div class="tbl-wrap"><table>
+    <tr><th>Chapter</th><th>Topic</th><th>Key Focus</th></tr>
+    <tr><td><span class="badge b-blue">31</span></td><td>Bankruptcy</td><td>Process, priority, discharge, preferences, automatic stay</td></tr>
+    <tr><td><span class="badge b-teal">32</span></td><td>Agency</td><td>Creation, authority types, employee vs IC, duties</td></tr>
+    <tr><td><span class="badge b-gold">37</span></td><td>Partnerships</td><td>Formation, UPA defaults, fiduciary duties, dissociation</td></tr>
+    <tr><td><span class="badge b-purple">38</span></td><td>LLCs</td><td>Hybrid structure, management, dissolution, veil piercing</td></tr>
+    <tr><td><span class="badge b-coral">39</span></td><td>Corporations</td><td>Formation, classification, veil piercing, financing</td></tr>
+    <tr><td><span class="badge b-green">40</span></td><td>Directors &amp; Officers</td><td>Duties, BJR, loyalty, conflicts, derivative suits</td></tr>
+  </table></div>
+  <h3>Prof. McDonald&rsquo;s Top 10 Things to Know</h3>
+  <div class="grid2">
+    <div class="card"><ul>
+      <li><strong>Automatic stay</strong> &mdash; what it stops, what it doesn&rsquo;t</li>
+      <li><strong>Priority system</strong> &mdash; secured &rarr; priority unsecured &rarr; general unsecured</li>
+      <li><strong>Means test</strong> &mdash; income vs. median eligibility for Ch 7</li>
+      <li><strong>Agency creation and authority</strong> &mdash; 4 ways to create; actual vs. apparent</li>
+      <li><strong>Control test</strong> &mdash; employee vs. independent contractor</li>
+    </ul></div>
+    <div class="card"><ul>
+      <li><strong>UPA default rules</strong> &mdash; equal management, profit sharing, majority/unanimous votes</li>
+      <li><strong>LLC default rules</strong> &mdash; member-managed, equal distributions, winding up order</li>
+      <li><strong>Veil-piercing factors</strong> &mdash; commingling, formalities, fraud, undercapitalization</li>
+      <li><strong>Director &amp; officer duties</strong> &mdash; care, loyalty, BJR</li>
+      <li><strong>Shareholder voting &amp; derivative suits</strong></li>
+    </ul></div>
+  </div>
+  <div class="callout"><strong>Study approach:</strong> Understand &gt; Memorize. Apply rules to facts. Think like a manager or advisor: &ldquo;Who has authority, liability, or rights here?&rdquo; Be ready to spot issues in fact patterns and identify the correct legal outcome.</div>
+</div>
+
+<!-- ══ RAPID REVIEW ══ -->
+<div class="section" id="s-rapid">
+  <h2>&#9889; Rapid Review &mdash; Final Cram</h2>
+  <p class="section-intro">If you only have one hour, study this. Top 25 most testable rules, one per line. Know these cold.</p>
+  <h3>Top 25 Must-Know Rules</h3>
+  <div class="card">
+    <div class="cram-item"><div class="cram-num">01</div><div class="cram-text"><strong>Bankruptcy goals:</strong> Fresh start for debtor + equitable treatment of creditors.</div></div>
+    <div class="cram-item"><div class="cram-num">02</div><div class="cram-text"><strong>Automatic stay:</strong> Stops ALL collection actions the moment the petition is filed. Exceptions: domestic support, divorce, child custody, SEC investigations.</div></div>
+    <div class="cram-item"><div class="cram-num">03</div><div class="cram-text"><strong>Means test:</strong> If income &gt; state median by $6,000+, abuse is presumed and trustee can move to dismiss Ch 7.</div></div>
+    <div class="cram-item"><div class="cram-num">04</div><div class="cram-text"><strong>Preferences (90-day rule):</strong> Trustee can recover payments to creditors made within 90 days of filing if debtor was insolvent and creditor received more than in bankruptcy.</div></div>
+    <div class="cram-item"><div class="cram-num">05</div><div class="cram-text"><strong>Fraudulent transfers (2-year rule):</strong> Trustee can void transfers made within 2 years with intent to hinder, delay, or defraud creditors.</div></div>
+    <div class="cram-item"><div class="cram-num">06</div><div class="cram-text"><strong>Creditor priority order:</strong> Secured creditors (collateral) &rarr; Priority unsecured (domestic support first) &rarr; General unsecured &rarr; Shareholders.</div></div>
+    <div class="cram-item"><div class="cram-num">07</div><div class="cram-text"><strong>Non-dischargeable debts:</strong> Taxes, domestic support, fraud, DUI liability, student loans (unless undue hardship), willful misconduct, luxury goods $800+ within 90 days.</div></div>
+    <div class="cram-item"><div class="cram-num">08</div><div class="cram-text"><strong>Agency = fiduciary relationship.</strong> Principal controls agent. Created by: agreement, ratification, estoppel, operation of law.</div></div>
+    <div class="cram-item"><div class="cram-num">09</div><div class="cram-text"><strong>Control test (employee vs. IC):</strong> Most important factor = how much control does employer exercise over the DETAILS of the work.</div></div>
+    <div class="cram-item"><div class="cram-num">10</div><div class="cram-text"><strong>Agent&rsquo;s 5 duties to principal:</strong> Performance, Notification, Loyalty, Obedience, Accounting (PNLOA).</div></div>
+    <div class="cram-item"><div class="cram-num">11</div><div class="cram-text"><strong>Principal&rsquo;s 4 duties to agent:</strong> Compensation, Reimbursement/Indemnification, Cooperation, Safe workplace.</div></div>
+    <div class="cram-item"><div class="cram-num">12</div><div class="cram-text"><strong>Partnership 3 essentials:</strong> Joint ownership + sharing profits/losses + equal management. Profit sharing = strongest indicator.</div></div>
+    <div class="cram-item"><div class="cram-num">13</div><div class="cram-text"><strong>Partnership voting:</strong> Majority vote = ordinary matters. Unanimous vote = fundamental changes.</div></div>
+    <div class="cram-item"><div class="cram-num">14</div><div class="cram-text"><strong>Partnership liability:</strong> Joint liability &mdash; each partner personally liable for ALL partnership debts.</div></div>
+    <div class="cram-item"><div class="cram-num">15</div><div class="cram-text"><strong>Partner&rsquo;s duty of care:</strong> Gross negligence standard &mdash; NOT liable for simple negligence or honest errors in judgment.</div></div>
+    <div class="cram-item"><div class="cram-num">16</div><div class="cram-text"><strong>LLC = hybrid:</strong> Limited liability (like corporation) + pass-through taxation (like partnership). Default = member-managed.</div></div>
+    <div class="cram-item"><div class="cram-num">17</div><div class="cram-text"><strong>LLC winding up order:</strong> (1) Creditors paid first &rarr; (2) Return capital contributions &rarr; (3) Remainder distributed equally (or per agreement).</div></div>
+    <div class="cram-item"><div class="cram-num">18</div><div class="cram-text"><strong>Veil piercing triggers:</strong> Commingling funds, ignoring formalities, undercapitalization, fraud, alter-ego. Applies to both LLCs and corporations.</div></div>
+    <div class="cram-item"><div class="cram-num">19</div><div class="cram-text"><strong>Corporation = separate legal person.</strong> Limited liability + double taxation. Formed by filing articles of incorporation.</div></div>
+    <div class="cram-item"><div class="cram-num">20</div><div class="cram-text"><strong>Directors are NOT agents.</strong> Officers ARE agents. Directors set policy; officers run daily operations.</div></div>
+    <div class="cram-item"><div class="cram-num">21</div><div class="cram-text"><strong>Duty of care:</strong> Act in good faith, exercise ordinary prudence, act in best interests of corporation. Includes duty to investigate before deciding.</div></div>
+    <div class="cram-item"><div class="cram-num">22</div><div class="cram-text"><strong>Business Judgment Rule (BJR):</strong> Courts protect good-faith business decisions if: (1) reasonably informed, (2) rational basis, (3) no personal conflict.</div></div>
+    <div class="cram-item"><div class="cram-num">23</div><div class="cram-text"><strong>Duty of loyalty:</strong> No competing with corporation, no usurping corporate opportunities, no undisclosed self-dealing.</div></div>
+    <div class="cram-item"><div class="cram-num">24</div><div class="cram-text"><strong>Conflict of interest:</strong> Director must (1) fully disclose, (2) disclose all pertinent facts, (3) abstain from voting on the transaction.</div></div>
+    <div class="cram-item"><div class="cram-num">25</div><div class="cram-text"><strong>Derivative suit:</strong> Shareholder sues on behalf of corporation when directors fail to act. Must first demand board action. Damages go to the corporation, not the shareholder.</div></div>
+  </div>
+  <h3>Likely Fact Pattern Types (Professor-Style Questions)</h3>
+  <div class="grid2">
+    <div class="scenario-box"><div class="s-label">Scenario Type</div><p>Debtor transfers car to cousin for $100 one week before filing bankruptcy.</p><div class="s-answer">&#10003; Fraudulent transfer (undervalue + timing). Also check: preference if cousin is a creditor (90-day rule + insider = 1 year).</div></div>
+    <div class="scenario-box"><div class="s-label">Scenario Type</div><p>Partner secretly starts a competing business or diverts clients to own side firm.</p><div class="s-answer">&#10003; Breach of duty of loyalty. Remedy: partnership can recover all profits the partner made.</div></div>
+    <div class="scenario-box"><div class="s-label">Scenario Type</div><p>LLC member pays personal bills from LLC account.</p><div class="s-answer">&#10003; Commingling &rarr; veil piercing risk. Member loses limited liability protection.</div></div>
+    <div class="scenario-box"><div class="s-label">Scenario Type</div><p>Director approves acquisition without investigation. Deal fails. Shareholders sue.</p><div class="s-answer">&#10003; Duty of care issue. BJR may protect IF director was reasonably informed + rational basis + no conflict.</div></div>
+    <div class="scenario-box"><div class="s-label">Scenario Type</div><p>Company gives someone business cards and an office, third party relies on apparent authority.</p><div class="s-answer">&#10003; Agency by estoppel. Principal created the appearance; principal is bound.</div></div>
+    <div class="scenario-box"><div class="s-label">Scenario Type</div><p>Agent accepts tickets from vendor bidding for corporate contract.</p><div class="s-answer">&#10003; Breach of duty of loyalty (undisclosed benefit). Agent must act solely for principal&rsquo;s benefit.</div></div>
+  </div>
+  <h3>Fast Recall by Chapter</h3>
+  <div class="tab-row">
+    <button class="tab-btn on" onclick="showTab('rc31','rc')">Ch 31</button>
+    <button class="tab-btn" onclick="showTab('rc32','rc')">Ch 32</button>
+    <button class="tab-btn" onclick="showTab('rc37','rc')">Ch 37</button>
+    <button class="tab-btn" onclick="showTab('rc38','rc')">Ch 38</button>
+    <button class="tab-btn" onclick="showTab('rc39','rc')">Ch 39</button>
+    <button class="tab-btn" onclick="showTab('rc40','rc')">Ch 40</button>
+  </div>
+  <div class="sub-section on" id="rc31"><ul class="std"><li>Ch 7 = liquidation (most common). Ch 11 = reorganization. Ch 12 = farmers/fishermen. Ch 13 = individuals with income.</li><li>Voluntary = debtor files. Involuntary = creditors force (&ge;12 creditors: need 3+ with $18,600 unsecured; &lt;12 creditors: 1+ with $18,600).</li><li>Automatic stay stops everything &mdash; exceptions: domestic support, divorce/custody, SEC.</li><li>Trustee&rsquo;s powers: strong-arm power, avoid preferences (90 days), avoid fraudulent transfers (2 years).</li><li>Priority: secured &rarr; domestic support &rarr; admin expenses &rarr; wages &rarr; taxes &rarr; general unsecured &rarr; shareholders.</li><li>Non-dischargeable: taxes, support, fraud, DUI, student loans.</li><li>Discharge denied: concealment, prior discharge within 8 years, failure to complete consumer education.</li></ul></div>
+  <div class="sub-section" id="rc32"><ul class="std"><li>Agency = fiduciary. Principal controls agent. No writing or consideration required.</li><li>4 ways created: agreement, ratification (approval of unauthorized act), estoppel (principal created appearance), operation of law (family/emergency).</li><li>Control test #1 factor: degree of control over DETAILS of work.</li><li>Employee &rarr; employer owes benefits, taxes, overtime. IC &rarr; none of those apply.</li><li>Agent&rsquo;s duties: PNLOA (Performance, Notification, Loyalty, Obedience, Accounting).</li><li>Principal&rsquo;s duties: Compensation, Reimbursement/Indemnification, Cooperation, Safe workplace.</li><li>Law imputes agent&rsquo;s knowledge to principal regardless of whether agent told principal.</li></ul></div>
+  <div class="sub-section" id="rc37"><ul class="std"><li>Partnership = 2+ persons, co-owners, carrying on business for profit.</li><li>3 essential elements: joint ownership, profit sharing, equal management right.</li><li>Profit sharing = strongest indicator of partnership existence.</li><li>UPA governs in absence of express agreement.</li><li>All partners = agents of each other. Acts within scope bind the firm.</li><li>Duty of care = gross negligence standard (NOT simple negligence).</li><li>Duty of loyalty: can&rsquo;t compete, can&rsquo;t usurp opportunities, can&rsquo;t self-deal without disclosure.</li><li>Ordinary matters = majority vote. Fundamental changes = unanimous vote.</li><li>Partners jointly liable: each liable for full amount of partnership debts.</li><li>Dissociation = leaving. Dissolution = winding down.</li></ul></div>
+  <div class="sub-section" id="rc38"><ul class="std"><li>LLC = limited liability + pass-through taxation. Formed by articles of organization.</li><li>Default = member-managed. Can be manager-managed if designated.</li><li>Operating agreement governs internal operations. Not required but strongly recommended in writing.</li><li>Dissociation: member loses management rights, loses agency authority, duty of loyalty ends, care duty continues for pre-dissociation acts.</li><li>Dissolution order: creditors first &rarr; capital returned &rarr; remainder equally distributed.</li><li>Commingling personal/LLC funds &rarr; veil piercing &rarr; member loses limited liability.</li><li>Profits split equally by default (not by capital contribution).</li></ul></div>
+  <div class="sub-section" id="rc39"><ul class="std"><li>Corporation = artificial person, separate legal entity. Limited liability. Double taxation.</li><li>Formed by filing articles of incorporation with secretary of state.</li><li>Bylaws = internal rules adopted at first organizational meeting.</li><li>Types: domestic/foreign/alien (location) &bull; public/private (government vs. profit) &bull; close corporation (small group of shareholders).</li><li>S-Corp: close corp taxed as partnership; max 100 shareholders; domestic only.</li><li>Veil piercing: commingling, ignoring formalities, undercapitalization, fraud, alter ego.</li><li>Common stock = voting rights. Preferred stock = fixed dividend priority, no voting typically. Bonds = debt (not equity).</li></ul></div>
+  <div class="sub-section" id="rc40"><ul class="std"><li>Board of directors = ultimate authority. Policy decisions. NOT agents individually.</li><li>Officers = agents. Hired by board. Run daily operations. Board can remove any time.</li><li>Three required committees for public cos: Audit, Compensation, Nominating/Governance.</li><li>Director rights: participation (attend/vote meetings), inspection (almost absolute), indemnification (reimbursed for legal costs).</li><li>Duty of care: good faith + ordinary prudence + best interests of corp + informed decision.</li><li>BJR protects: informed + rational basis + no personal conflict = court won&rsquo;t second-guess.</li><li>Duty of loyalty: disclose conflicts fully, abstain from vote, no corporate opportunity theft.</li><li>Derivative suit: shareholder sues for corporation. Must demand action first. Damages go to corp.</li><li>Quorum = 50%+ of shares. Majority vote passes resolutions. Cumulative voting helps minority shareholders elect directors.</li></ul></div>
+</div>
+
+<!-- ══ CH 31 BANKRUPTCY ══ -->
+<div class="section" id="s-ch31">
+  <h2>Chapter 31 &mdash; Bankruptcy</h2>
+  <p class="section-intro">The largest chapter on the exam (covered over 2 days). Know the full process step-by-step, the priority of creditors, and exactly what can and cannot be discharged.</p>
+  <h3>Chapter Summary</h3>
+  <div class="card"><p>Bankruptcy law has two goals: (1) give the debtor a <strong style="color:var(--text)">fresh start</strong> free from certain creditors&rsquo; claims, and (2) ensure <strong style="color:var(--text)">equitable treatment</strong> of all creditors competing for limited assets. Federal bankruptcy courts have exclusive jurisdiction. Appeals go to federal district courts.</p></div>
+  <h3>The Four Bankruptcy Chapters</h3>
+  <div class="tbl-wrap"><table>
+    <tr><th>Chapter</th><th>Name</th><th>Who Uses It</th><th>Key Feature</th></tr>
+    <tr><td><span class="badge b-coral">Ch 7</span></td><td>Liquidation (Straight)</td><td>Individuals &amp; businesses</td><td>All nonexempt assets sold; debtor discharged of remaining debts. Most common.</td></tr>
+    <tr><td><span class="badge b-blue">Ch 11</span></td><td>Reorganization</td><td>Corporations primarily; also individuals</td><td>Debtor stays in business as Debtor in Possession (DIP); reorganization plan restructures debts.</td></tr>
+    <tr><td><span class="badge b-gold">Ch 12</span></td><td>Family Farmers/Fishermen</td><td>Family farmers &amp; fishermen</td><td>Adjustment of debts; person continues operations.</td></tr>
+    <tr><td><span class="badge b-teal">Ch 13</span></td><td>Individual Adjustment</td><td>Individuals with regular income</td><td>Repayment plan over 3&ndash;5 years; debtor keeps assets.</td></tr>
+  </table></div>
+  <h3>Voluntary vs. Involuntary Petitions</h3>
+  <div class="grid2">
+    <div class="card card-teal"><strong>Voluntary</strong><p>Debtor files the petition. Must have received credit counseling within 180 days of filing. Filing itself constitutes an <strong style="color:var(--text)">order for relief</strong>.</p></div>
+    <div class="card card-coral"><strong>Involuntary</strong><p>Creditors force the debtor into bankruptcy. <strong style="color:var(--text)">12+ creditors:</strong> need 3+ with unsecured claims totaling $18,600+. <strong style="color:var(--text)">&lt;12 creditors:</strong> 1+ creditor with $18,600+ claim. Court grants order for relief if debtor not paying debts as due, or custodian was appointed within 120 days before filing.</p></div>
+  </div>
+  <h3>The Means Test <span class="exam-tag">HIGH YIELD</span></h3>
+  <div class="card">
+    <p>Used to determine eligibility for Ch 7. Compares debtor&rsquo;s average income to the <strong style="color:var(--text)">median family income</strong> in the debtor&rsquo;s state.</p>
+    <ul style="margin-top:8px;padding-left:1.1rem;">
+      <li style="font-size:13px;color:var(--text2);margin-bottom:4px;"><strong style="color:var(--text)">Below median:</strong> Ch 7 is available.</li>
+      <li style="font-size:13px;color:var(--text2);margin-bottom:4px;"><strong style="color:var(--text)">Exceeds median by $6,000+:</strong> Abuse is presumed; trustee or creditor can move to dismiss.</li>
+      <li style="font-size:13px;color:var(--text2)"><strong style="color:var(--text)">In between:</strong> Further calculations required.</li>
+    </ul>
+  </div>
+  <div class="callout"><strong>Texas median income (post May 2024):</strong> 1 person: $61,460 &bull; 2: $79,870 &bull; 3: $89,842 &bull; 4: $108,866 &bull; Add $9,900 per person over 4.</div>
+  <h3>Automatic Stay <span class="exam-tag">HIGH YIELD</span></h3>
+  <div class="card card-blue"><p>Effective the <strong style="color:var(--text)">instant the petition is filed</strong>. Suspends almost all litigation and collection actions against the debtor. Willful violation = actual damages + costs + attorney fees.</p></div>
+  <div class="warn"><strong>Exceptions to Automatic Stay (these CAN continue):</strong>
+    <ul style="margin-top:6px;padding-left:1.1rem;">
+      <li style="font-size:13px;margin-bottom:3px;">Collection of domestic support obligations (child support, alimony)</li>
+      <li style="font-size:13px;margin-bottom:3px;">Divorce, child custody/visitation, domestic violence proceedings</li>
+      <li style="font-size:13px;margin-bottom:3px;">Investigations by a securities regulatory agency (SEC)</li>
+      <li style="font-size:13px;">Certain government tax liens</li>
+    </ul>
+    <p style="font-size:12px;margin-top:6px;"><strong>Bad Faith:</strong> If 2+ petitions dismissed in the prior year &rarr; stay presumed in bad faith and does NOT go into effect automatically.</p>
+  </div>
+  <h3>Bankruptcy Estate &amp; Trustee</h3>
+  <div class="grid2">
+    <div class="card card-gold"><strong>Bankruptcy Estate</strong><p>Created at commencement of Ch 7. Includes ALL property held by debtor at filing + community property + proceeds. <strong style="color:var(--text)">Filing date is the dividing line</strong> &mdash; property before filing = estate; property after = debtor&rsquo;s.</p></div>
+    <div class="card card-blue"><strong>Trustee&rsquo;s Role</strong><p>Collect estate, reduce to cash, distribute to creditors. Review materials for substantial abuse. File abuse statement within 10 days of first creditors&rsquo; meeting. Has <strong style="color:var(--text)">strong-arm power</strong> (equivalent to judicial lien creditor&rsquo;s rights).</p></div>
+  </div>
+  <h3>Trustee&rsquo;s Avoidance Powers <span class="exam-tag">HIGH YIELD</span></h3>
+  <div class="grid2">
+    <div class="card card-coral"><strong>Preferences (90-Day Rule)</strong><p>Trustee can recover payments made within <strong style="color:var(--text)">90 days before filing</strong> if: debtor was insolvent, the payment was for a pre-existing debt, and the creditor received more than in bankruptcy. Insiders (family, business partners): <strong style="color:var(--text)">1-year</strong> lookback.</p></div>
+    <div class="card card-orange"><strong>Fraudulent Transfers (2-Year Rule)</strong><p>Trustee can void transfers made within <strong style="color:var(--text)">2 years before filing</strong> with actual intent to hinder, delay, or defraud creditors. The key scenario: selling an asset for far below market value before filing.</p></div>
+  </div>
+  <h3>Creditor Priority Order <span class="exam-tag">HIGH YIELD</span></h3>
+  <div class="card">
+    <div class="priority-item"><div class="priority-num p-secured">1</div><div class="priority-body"><strong>Secured Creditors</strong> &mdash; Paid first from proceeds of their specific collateral. If collateral is insufficient, remainder becomes unsecured claim.</div></div>
+    <div class="priority-item"><div class="priority-num p-priority">2</div><div class="priority-body"><strong>Domestic Support Obligations</strong> &mdash; Highest priority unsecured (child support, alimony, owed to spouse/former spouse/child/government unit).</div></div>
+    <div class="priority-item"><div class="priority-num p-priority">3</div><div class="priority-body"><strong>Administrative Expenses</strong> &mdash; Costs of administering the bankruptcy estate.</div></div>
+    <div class="priority-item"><div class="priority-num p-priority">4</div><div class="priority-body"><strong>Wages, Salaries, Commissions</strong> &mdash; Earned within 180 days before filing, up to $13,650 per person.</div></div>
+    <div class="priority-item"><div class="priority-num p-priority">5</div><div class="priority-body"><strong>Government Taxes</strong> &mdash; Income taxes owed to federal and state governments.</div></div>
+    <div class="priority-item"><div class="priority-num p-general">6</div><div class="priority-body"><strong>General Unsecured Creditors</strong> &mdash; Paid pro-rata from what remains. In almost all Ch 7s, funds are insufficient.</div></div>
+    <div class="priority-item"><div class="priority-num p-equity">7</div><div class="priority-body"><strong>Shareholders / Owners</strong> &mdash; Last in line. Receive anything only if all above classes are fully paid.</div></div>
+  </div>
+  <div class="callout">Each class must be <strong>fully paid</strong> before the next class receives anything. If funds run out mid-class, creditors in that class share pro-rata.</div>
+  <h3>Discharge &amp; Non-Dischargeable Debts <span class="exam-tag">HIGH YIELD</span></h3>
+  <div class="card card-green"><strong>Discharge</strong><p>Voids previous debts and prevents future collection actions. The debtor&rsquo;s &ldquo;fresh start.&rdquo; Not all debts can be discharged.</p></div>
+  <div class="danger"><strong>Non-Dischargeable Debts (must know all of these):</strong>
+    <ul style="margin-top:6px;padding-left:1.1rem;">
+      <li style="font-size:13px;margin-bottom:3px;"><strong style="color:var(--text)">Back taxes</strong> accruing within 2 years prior to bankruptcy</li>
+      <li style="font-size:13px;margin-bottom:3px;"><strong style="color:var(--text)">Domestic support</strong> (child support, alimony, property settlements)</li>
+      <li style="font-size:13px;margin-bottom:3px;"><strong style="color:var(--text)">Fraud</strong> &mdash; debts obtained by false pretenses or fraud</li>
+      <li style="font-size:13px;margin-bottom:3px;"><strong style="color:var(--text)">DUI liability</strong> &mdash; judgments from operating motor vehicle while intoxicated</li>
+      <li style="font-size:13px;margin-bottom:3px;"><strong style="color:var(--text)">Student loans</strong> &mdash; UNLESS undue hardship (very difficult standard to meet)</li>
+      <li style="font-size:13px;margin-bottom:3px;"><strong style="color:var(--text)">Willful/malicious</strong> conduct toward another person or their property</li>
+      <li style="font-size:13px;margin-bottom:3px;"><strong style="color:var(--text)">Luxury goods $800+</strong> from a single creditor within 90 days of order for relief</li>
+      <li style="font-size:13px;"><strong style="color:var(--text)">Cash advances $1,100+</strong> on open-end credit within 70 days of order for relief</li>
+    </ul>
+  </div>
+  <div class="warn"><strong>Discharge Denied When (debtor&rsquo;s misconduct):</strong> Concealment or destruction of property/records, prior discharge within 8 years, failure to complete consumer education course, involvement in proceedings where debtor could be found guilty of a felony. If denied, assets are still distributed to creditors but debtor remains liable for unpaid amounts.</div>
+  <h3>Chapter 11 Reorganization (Key Points)</h3>
+  <ul class="std">
+    <li><strong>Debtor in Possession (DIP):</strong> Debtor continues to operate the business after order for relief. Court may appoint trustee if gross mismanagement shown.</li>
+    <li><strong>Exclusive period:</strong> Only the debtor may file a plan within the first 120 days. Can extend but not beyond 18 months.</li>
+    <li><strong>Plan acceptance:</strong> Majority of creditors in each class, representing two-thirds of the total claim amount, must vote to approve.</li>
+    <li><strong>Cram-down:</strong> Court can confirm a plan even if only one class accepts it, as long as it is fair, equitable, and does not discriminate unfairly.</li>
+    <li><strong>Workout:</strong> Private, negotiated adjustment between debtor and creditors &mdash; more flexible and cheaper than formal bankruptcy.</li>
+  </ul>
+  <h3>Exam Traps &mdash; Bankruptcy</h3>
+  <div class="trap-card"><div class="trap-title">Trap 1</div><p>The automatic stay does NOT stop domestic support collection, divorce proceedings, or SEC investigations. These continue.</p></div>
+  <div class="trap-card"><div class="trap-title">Trap 2</div><p>The 90-day preference rule looks back from the filing date, not the order for relief date. For insiders, the lookback is 1 year.</p></div>
+  <div class="trap-card"><div class="trap-title">Trap 3</div><p>Student loans are non-dischargeable UNLESS the debtor proves &ldquo;undue hardship.&rdquo; Courts apply this standard very strictly &mdash; merely being poor is not enough.</p></div>
+  <div class="trap-card"><div class="trap-title">Trap 4</div><p>Discharge can be revoked within 1 year if the debtor acted fraudulently during the bankruptcy proceeding.</p></div>
+  <div class="trap-card"><div class="trap-title">Trap 5</div><p>For voluntary petitions, the filing of the petition itself constitutes the order for relief &mdash; no separate court action needed.</p></div>
+  <h3>Memory Aid</h3>
+  <div class="memory-box">
+    <div class="mnemonic">SETPAD</div>
+    <div class="breakdown">Non-dischargeable debts: <span>S</span>tudent loans &bull; <span>E</span>mbezzlement/fraud &bull; <span>T</span>axes &bull; <span>P</span>ersonal injury (DUI) &bull; <span>A</span>limony/domestic support &bull; <span>D</span>eliberate (willful) misconduct</div>
+  </div>
+  <div class="memory-box">
+    <div class="mnemonic">90 / 2</div>
+    <div class="breakdown"><span>90 days</span> = preference lookback &bull; <span>2 years</span> = fraudulent transfer lookback</div>
+  </div>
+</div>
+
+<!-- ══ CH 32 AGENCY ══ -->
+<div class="section" id="s-ch32">
+  <h2>Chapter 32 &mdash; Agency Formation &amp; Duties</h2>
+  <p class="section-intro">Agency is the fiduciary relationship where an agent acts on behalf of and subject to the control of a principal. One of the most pervasive legal relationships in business.</p>
+  <h3>Chapter Summary</h3>
+  <div class="card"><p>Agency = fiduciary relationship where principal controls agent. Any person can be an agent (even a minor). Only persons with contractual capacity can be principals. No writing or consideration required to form an agency. Created for any legal purpose.</p></div>
+  <h3>Four Ways to Create an Agency <span class="exam-tag">HIGH YIELD</span></h3>
+  <div class="flow-step"><div class="step-num">1</div><div class="step-body"><div class="title">Agency by Agreement</div><div class="desc">Most common. Express written contract, oral agreement, or implied by conduct. Example: employer hires employee to handle sales.</div></div></div>
+  <div class="flow-step"><div class="step-num">2</div><div class="step-body"><div class="title">Agency by Ratification</div><div class="desc">A non-agent acts on behalf of another, and the &ldquo;principal&rdquo; later approves (by words or conduct). Example: Abel buys $25K inventory for Paul (who only authorized $10K), Paul accepts and uses it &rarr; ratification binds Paul.</div></div></div>
+  <div class="flow-step"><div class="step-num">3</div><div class="step-body"><div class="title">Agency by Estoppel</div><div class="desc">Principal&rsquo;s actions create the appearance of agency; third party reasonably relies to their detriment. Created by PRINCIPAL&rsquo;s actions, NOT the agent&rsquo;s claims. Example: Company gives someone business cards and an office &rarr; third party relies on apparent authority &rarr; company estopped to deny agency.</div></div></div>
+  <div class="flow-step"><div class="step-num">4</div><div class="step-body"><div class="title">Agency by Operation of Law</div><div class="desc">Courts find agency without formal agreement in: (1) Family relationships (spouse purchasing necessaries), (2) Emergency situations (agent cannot reach principal and failure to act would cause substantial loss).</div></div></div>
+  <h3>Employee vs. Independent Contractor <span class="exam-tag">HIGH YIELD</span></h3>
+  <div class="card card-blue"><strong>Control Test &mdash; Most Important Factor</strong><p>How much control does the employer exercise over the <em>details</em> of the work and day-to-day activities? More control = employee. Less control = independent contractor.</p></div>
+  <div class="tbl-wrap"><table>
+    <tr><th>Factor</th><th>Points to Employee</th><th>Points to IC</th></tr>
+    <tr><td>Control over work details</td><td>High control by employer</td><td>Worker controls own methods</td></tr>
+    <tr><td>Distinct occupation/business</td><td>Same business as employer</td><td>Distinct from employer&rsquo;s business</td></tr>
+    <tr><td>Supervision</td><td>Under employer&rsquo;s direction</td><td>Specialist, no supervision</td></tr>
+    <tr><td>Tools provided by</td><td>Employer provides tools &amp; place</td><td>Worker provides own tools</td></tr>
+    <tr><td>Duration of employment</td><td>Long-term relationship</td><td>Project-based</td></tr>
+    <tr><td>Payment method</td><td>By time period (weekly/monthly)</td><td>By job completion</td></tr>
+    <tr><td>Skill required</td><td>Low skill level</td><td>High specialized skill</td></tr>
+  </table></div>
+  <div class="callout"><strong>Why it matters:</strong> Employees &rarr; employer must pay Social Security, workers&rsquo; comp, unemployment insurance, overtime (1.5x after 40 hrs/week), and employment discrimination laws apply. ICs &rarr; none of that. Also: <strong>work for hire</strong> &mdash; employee&rsquo;s work product belongs to employer; IC keeps copyright unless agreement says otherwise.</div>
+  <h3>Authority Types</h3>
+  <div class="grid2">
+    <div class="card card-green"><strong>Actual Authority</strong><p><strong>Express:</strong> Explicitly granted (written or oral). <strong>Implied:</strong> Reasonably necessary to carry out express authority (e.g., buying supplies to run the store).</p></div>
+    <div class="card card-orange"><strong>Apparent Authority</strong><p>Principal&rsquo;s conduct causes third party to reasonably believe agent has authority. Principal is bound even if agent lacked actual authority. Third party&rsquo;s reliance must be reasonable.</p></div>
+  </div>
+  <h3>Agent&rsquo;s Five Duties to Principal <span class="exam-tag">HIGH YIELD</span></h3>
+  <div class="grid2">
+    <div class="card card-teal"><strong>Performance</strong><p>Use reasonable diligence and skill. Must meet the skill level claimed. Gratuitous agents subject to tort (not contract) liability.</p></div>
+    <div class="card card-blue"><strong>Notification</strong><p>Notify principal of all relevant matters. Law assumes principal knows anything agent learns &mdash; regardless of whether agent actually told principal.</p></div>
+    <div class="card card-coral"><strong>Loyalty</strong><p>Act solely for principal&rsquo;s benefit. No self-dealing. Confidentiality during AND after agency. Abel buys building for $1M, sells to Paul for $2M keeping the profit = breach of loyalty.</p></div>
+    <div class="card card-gold"><strong>Obedience</strong><p>Follow all lawful and clearly stated instructions. Deviation = breach (except in emergencies when principal cannot be reached).</p></div>
+    <div class="card card-purple"><strong>Accounting</strong><p>Keep accurate records of all property and funds. Must maintain SEPARATE accounts for principal&rsquo;s funds. Cannot commingle with personal funds. Attorney violation also triggers disciplinary action.</p></div>
+  </div>
+  <div class="memory-box">
+    <div class="mnemonic">PNLOA</div>
+    <div class="breakdown"><span>P</span>erformance &bull; <span>N</span>otification &bull; <span>L</span>oyalty &bull; <span>O</span>bedience &bull; <span>A</span>ccounting</div>
+  </div>
+  <h3>Principal&rsquo;s Four Duties to Agent</h3>
+  <div class="grid2">
+    <div class="card card-teal"><strong>Compensation</strong><p>Pay agreed-on value (or customary compensation if not specified) timely.</p></div>
+    <div class="card card-blue"><strong>Reimbursement &amp; Indemnification</strong><p>Reimburse expenses incurred in reasonable performance. Indemnify for liabilities from authorized lawful acts.</p></div>
+    <div class="card card-gold"><strong>Cooperation</strong><p>Must cooperate and do nothing to prevent agent&rsquo;s performance. Violating exclusive agency = liable for lost profits.</p></div>
+    <div class="card card-green"><strong>Safe Working Conditions</strong><p>Inspect premises. Warn about unsafe conditions.</p></div>
+  </div>
+  <h3>Exam Traps &mdash; Agency</h3>
+  <div class="trap-card"><div class="trap-title">Trap 1</div><p>Agency by agreement does NOT require writing or consideration. An oral agreement is valid.</p></div>
+  <div class="trap-card"><div class="trap-title">Trap 2</div><p>The law imputes the agent&rsquo;s knowledge to the principal whether or not the agent actually communicated it. If the agent knew, the principal is treated as knowing.</p></div>
+  <div class="trap-card"><div class="trap-title">Trap 3</div><p>Agency by estoppel is created by the PRINCIPAL&rsquo;s acts &mdash; not by the purported agent&rsquo;s own claims. A person can&rsquo;t make themselves an agent by simply claiming to be one.</p></div>
+  <div class="trap-card"><div class="trap-title">Trap 4</div><p>Any person can be an agent (including minors). But only persons with contractual capacity can be principals.</p></div>
+</div>
+
+<!-- ══ CH 37 PARTNERSHIPS ══ -->
+<div class="section" id="s-ch37">
+  <h2>Chapter 37 &mdash; Partnerships</h2>
+  <p class="section-intro">A partnership is two or more persons carrying on, as co-owners, a business for profit. Governed by the Uniform Partnership Act (UPA) in the absence of an express agreement.</p>
+  <h3>Essential Elements (3 Required) <span class="exam-tag">HIGH YIELD</span></h3>
+  <div class="grid3">
+    <div class="card card-blue"><strong>Joint Ownership</strong><p>Co-ownership of the business, not just property.</p></div>
+    <div class="card card-coral"><strong>Sharing of Profits/Losses</strong><p><strong>Strongest indicator of partnership.</strong> If profits are shared, courts presume a partnership exists.</p></div>
+    <div class="card card-teal"><strong>Equal Management Rights</strong><p>Each partner has an equal right to participate in running the business.</p></div>
+  </div>
+  <div class="callout">Agreement can be oral, written, or implied by conduct. No formalities required. Corporation can be a partner. Cannot join a partnership without ALL existing partners&rsquo; consent.</div>
+  <h3>UPA Default Rules (When No Agreement Exists) <span class="exam-tag">HIGH YIELD</span></h3>
+  <div class="tbl-wrap"><table>
+    <tr><th>Issue</th><th>UPA Default Rule</th></tr>
+    <tr><td>Management</td><td>Each partner has one vote, regardless of ownership percentage</td></tr>
+    <tr><td>Profits</td><td>Shared equally</td></tr>
+    <tr><td>Losses</td><td>Shared in same ratio as profits (equally if no profit agreement)</td></tr>
+    <tr><td>Ordinary decisions</td><td>Majority vote</td></tr>
+    <tr><td>Fundamental changes</td><td>Unanimous vote required</td></tr>
+    <tr><td>Compensation</td><td>Partner income = distribution of profits (no salary unless agreed)</td></tr>
+    <tr><td>Books</td><td>Kept at principal business office; every partner has right to inspect and copy</td></tr>
+    <tr><td>Taxes</td><td>Pass-through entity &mdash; partnership files information return but pays no tax; income taxed to partners individually</td></tr>
+  </table></div>
+  <h3>Partners as Agents</h3>
+  <div class="card"><p>Each partner is an agent of every other partner and of the partnership itself. Acts within the scope of the partnership business (or &ldquo;business of the kind&rdquo;) bind the firm. Every contract signed in the partnership&rsquo;s name binds the firm. Partners also owe each other fiduciary duties.</p></div>
+  <h3>Fiduciary Duties of Partners</h3>
+  <div class="grid2">
+    <div class="card card-gold"><strong>Duty of Care</strong><p>Limited to refraining from <strong style="color:var(--text)">grossly negligent or reckless conduct, intentional misconduct, or knowing violation of law</strong>. NOT liable for simple negligence or honest errors in judgment.</p></div>
+    <div class="card card-coral"><strong>Duty of Loyalty</strong><p>Account for all property/profit/benefit derived from partnership business or property. Cannot compete with the partnership. Cannot self-deal. Cannot usurp a partnership opportunity. Cannot disclose trade secrets. Duties cannot be waived or eliminated in the partnership agreement.</p></div>
+  </div>
+  <h3>Liability of Partners <span class="exam-tag">HIGH YIELD</span></h3>
+  <div class="danger"><strong>Joint and Several Liability:</strong> Partners are personally liable for ALL partnership debts. Each partner can be held liable for the FULL amount of any partnership obligation. A plaintiff must sue all partners as a group, but can recover the full judgment from any single partner.</div>
+  <div class="callout">Apparent authority: When a partner carries on partnership business in the usual way, apparent authority exists and both the partner AND the firm share liability &mdash; even without actual authority.</div>
+  <h3>Special Partnership Types</h3>
+  <div class="grid2">
+    <div class="card card-teal"><strong>Limited Partnership (LP)</strong><p>General partner(s): full management rights + full personal liability. Limited partner(s): contributes capital, no management right, liability limited to investment. General partner must exist.</p></div>
+    <div class="card card-blue"><strong>Limited Liability Partnership (LLP)</strong><p>Hybrid used by professionals (law firms, accounting firms). Pass-through tax. Partner&rsquo;s personal liability for OTHER partners&rsquo; malpractice is limited.</p></div>
+  </div>
+  <h3>Dissociation vs. Dissolution <span class="exam-tag">HIGH YIELD</span></h3>
+  <div class="grid2">
+    <div class="card card-orange"><strong>Dissociation</strong><p>One partner leaves the partnership. Terminates that partner&rsquo;s actual authority and management rights. Partnership may CONTINUE without the dissociated partner. The partnership buys out the departing partner at the buyout price (what the partner would have received if firm terminated on that date).</p></div>
+    <div class="card card-coral"><strong>Dissolution &amp; Winding Up</strong><p>The formal end of the partnership. Partners can only complete existing transactions and wind up. Cannot create new obligations. Assets distributed: pay creditors &rarr; return capital &rarr; distribute remainder per profit-sharing ratio.</p></div>
+  </div>
+  <h3>Voting Requirements Summary</h3>
+  <div class="grid2">
+    <div class="card card-green"><strong>Majority Vote (Ordinary Matters)</strong><ul><li>Day-to-day business decisions</li><li>Hiring employees</li><li>Most operational decisions</li></ul></div>
+    <div class="card card-gold"><strong>Unanimous Vote (Fundamental Changes)</strong><ul><li>Admitting new partners</li><li>Amending the partnership agreement</li><li>Authorizing acts outside ordinary business</li><li>Any decision that significantly changes the nature of the partnership</li></ul></div>
+  </div>
+  <h3>Exam Traps &mdash; Partnerships</h3>
+  <div class="trap-card"><div class="trap-title">Trap 1</div><p>Duty of care is GROSS negligence standard &mdash; NOT ordinary negligence. A partner is not liable for honest errors in judgment or simple mistakes. This is MORE lenient than corporate duty of care.</p></div>
+  <div class="trap-card"><div class="trap-title">Trap 2</div><p>Dissociation &ne; Dissolution. Dissociation = one partner leaves but firm continues. Dissolution = firm is wound down and terminated.</p></div>
+  <div class="trap-card"><div class="trap-title">Trap 3</div><p>Even if a partner acts without authority, the partnership can still be bound if apparent authority exists (third party reasonably believed the partner had authority based on ordinary course of business).</p></div>
+</div>
+
+<!-- ══ CH 38 LLCs ══ -->
+<div class="section" id="s-ch38">
+  <h2>Chapter 38 &mdash; Limited Liability Companies</h2>
+  <p class="section-intro">The LLC is a hybrid entity combining limited liability of a corporation with pass-through taxation of a partnership. The preferred structure for many small businesses.</p>
+  <h3>LLC Characteristics</h3>
+  <div class="grid2">
+    <div class="card card-blue"><strong>Like a Corporation</strong><ul><li>Limited liability for members</li><li>Separate legal entity (can sue/be sued, hold property, enter contracts)</li><li>Must be formed and operated per state law</li></ul></div>
+    <div class="card card-teal"><strong>Like a Partnership</strong><ul><li>Pass-through taxation (default)</li><li>Flexible management structure</li><li>Operating agreement (like partnership agreement)</li></ul></div>
+  </div>
+  <h3>Formation</h3>
+  <div class="card card-gold"><strong>Articles of Organization</strong><p>Filed with the secretary of state. Must include: name (must include &ldquo;LLC&rdquo; or &ldquo;Limited Liability Company&rdquo;), principal address, name/address of registered agent, members&rsquo; names, and how the LLC will be managed.</p></div>
+  <h3>Management Structure <span class="exam-tag">HIGH YIELD</span></h3>
+  <div class="grid2">
+    <div class="card card-teal"><strong>Member-Managed (Default)</strong><p>All members participate in management. Decisions by majority vote. Default unless articles specify otherwise.</p></div>
+    <div class="card card-blue"><strong>Manager-Managed</strong><p>Members designate a manager (can be members, non-members, or mixed). Non-managing members have no management role.</p></div>
+  </div>
+  <h3>Operating Agreement</h3>
+  <div class="card"><p>Members set the details of how the business will be managed and operated. Not required in many states for the LLC to legally exist. Need not be in writing (but should be). Covers: profit distribution, management, voting, buyout provisions, dissolution procedures.</p></div>
+  <h3>Default Rules When No Operating Agreement <span class="exam-tag">HIGH YIELD</span></h3>
+  <div class="tbl-wrap"><table>
+    <tr><th>Issue</th><th>Default Rule</th></tr>
+    <tr><td>Management</td><td>Member-managed</td></tr>
+    <tr><td>Profit distribution</td><td>Split EQUALLY among members (NOT by capital contribution)</td></tr>
+    <tr><td>Voting</td><td>Majority vote of members</td></tr>
+    <tr><td>Taxation</td><td>Pass-through (taxed as partnership)</td></tr>
+  </table></div>
+  <h3>Limited Liability &amp; When It Can Be Lost</h3>
+  <div class="success"><strong>Normal rule:</strong> Members&rsquo; liability is limited to their investment. The LLC as an entity absorbs liability from members&rsquo; wrongful acts.</div>
+  <div class="danger"><strong>Liability can be imposed if:</strong>
+    <ul style="margin-top:6px;padding-left:1.1rem;">
+      <li style="font-size:13px;margin-bottom:3px;">Member personally guarantees a business loan</li>
+      <li style="font-size:13px;">Member <strong style="color:var(--text)">commingles</strong> personal and business funds &rarr; veil piercing</li>
+    </ul>
+  </div>
+  <h3>Dissociation from an LLC</h3>
+  <div class="card"><p>Member ceases to be associated with carrying on the LLC business. Triggers: voluntary withdrawal, expulsion, court order, incompetence, bankruptcy, death.</p>
+  <p style="margin-top:8px;font-size:13px;color:var(--text2);">After dissociation: Member loses management rights and agency authority. <strong style="color:var(--text)">Duty of loyalty terminates.</strong> <strong style="color:var(--text)">Duty of care continues</strong> for pre-dissociation events only. Member has right to buyout at fair value.</p></div>
+  <h3>Winding Up &amp; Distribution Order <span class="exam-tag">HIGH YIELD</span></h3>
+  <div class="priority-item" style="margin-top:8px;"><div class="priority-num p-secured">1</div><div class="priority-body"><strong>Creditors paid first</strong> (including member-creditors owed money by the LLC)</div></div>
+  <div class="priority-item"><div class="priority-num p-priority">2</div><div class="priority-body"><strong>Members&rsquo; capital contributions returned</strong></div></div>
+  <div class="priority-item"><div class="priority-num p-equity">3</div><div class="priority-body"><strong>Remaining amounts distributed</strong> equally (or per operating agreement)</div></div>
+  <h3>Exam Traps &mdash; LLCs</h3>
+  <div class="trap-card"><div class="trap-title">Trap 1</div><p>Profits are split EQUALLY by default &mdash; NOT proportional to capital contributions. Capital contributions only matter for return of capital on dissolution.</p></div>
+  <div class="trap-card"><div class="trap-title">Trap 2</div><p>After dissociation, duty of loyalty ENDS but duty of care CONTINUES for events that occurred before dissociation. Don&rsquo;t confuse which duty continues.</p></div>
+  <div class="trap-card"><div class="trap-title">Trap 3</div><p>Dissolution &ne; Dissociation. Dissociation = one member leaves. Dissolution = the entire LLC is wound up and terminated. A member&rsquo;s dissociation does NOT automatically dissolve the LLC.</p></div>
+</div>
+
+<!-- ══ CH 39 CORPORATIONS ══ -->
+<div class="section" id="s-ch39">
+  <h2>Chapter 39 &mdash; Corporate Formation &amp; Financing</h2>
+  <p class="section-intro">A corporation is a separate legal person created and recognized by state law. Limited liability for shareholders. Double taxation. Governed by state statutes (guided by RMBCA).</p>
+  <h3>Key Characteristics</h3>
+  <div class="grid2">
+    <div class="card card-blue"><strong>Advantages</strong><ul><li>Limited liability for shareholders</li><li>Perpetual existence (shareholders can change without affecting the corporation)</li><li>Can sue and be sued in its own name</li><li>Constitutional rights: due process, free speech, freedom from unreasonable search &amp; seizure</li></ul></div>
+    <div class="card card-coral"><strong>Disadvantages</strong><ul><li>Double taxation: corporation pays tax on profits; shareholders pay tax on dividends</li><li>More complex and expensive to form and maintain</li><li>Must follow corporate formalities (or risk veil piercing)</li></ul></div>
+  </div>
+  <h3>Classification of Corporations <span class="exam-tag">HIGH YIELD</span></h3>
+  <div class="tbl-wrap"><table>
+    <tr><th>Type</th><th>Definition</th><th>Example</th></tr>
+    <tr><td><span class="badge b-blue">Domestic</span></td><td>Incorporated in the state where it does business</td><td>Texas company incorporated in Texas</td></tr>
+    <tr><td><span class="badge b-gold">Foreign</span></td><td>Doing business in a state where it is NOT incorporated</td><td>Texas company doing business in California</td></tr>
+    <tr><td><span class="badge b-teal">Alien</span></td><td>Formed in another country, doing business in the U.S.</td><td>Toyota USA operations</td></tr>
+    <tr><td><span class="badge b-purple">Public</span></td><td>Owned by a government entity</td><td>U.S. Postal Service, Amtrak</td></tr>
+    <tr><td><span class="badge b-green">Private</span></td><td>Created for private benefit (profit)</td><td>Most corporations</td></tr>
+    <tr><td><span class="badge b-orange">Publicly Held</span></td><td>Shares traded on stock exchange (NOT same as &ldquo;public corporation&rdquo;)</td><td>Apple, Microsoft</td></tr>
+    <tr><td><span class="badge b-coral">Close/Closely Held</span></td><td>Small group of shareholders; no trading market for shares; often family</td><td>Family business incorporated</td></tr>
+    <tr><td><span class="badge b-gold">S Corporation</span></td><td>Close corp taxed as partnership; max 100 shareholders; domestic only; no affiliated group membership</td><td>Small family business avoiding double tax</td></tr>
+  </table></div>
+  <h3>Formation Process</h3>
+  <div class="flow-step"><div class="step-num">1</div><div class="step-body"><div class="title">Select state of incorporation</div><div class="desc">Often the state where business will primarily operate</div></div></div>
+  <div class="flow-step"><div class="step-num">2</div><div class="step-body"><div class="title">Secure corporate name</div><div class="desc">Cannot be same as or deceptively similar to existing corporation in the state</div></div></div>
+  <div class="flow-step"><div class="step-num">3</div><div class="step-body"><div class="title">File Articles of Incorporation</div><div class="desc">With secretary of state. Primary source of authority for the corporation. Includes: name, purpose, authorized shares, registered agent, incorporators.</div></div></div>
+  <div class="flow-step"><div class="step-num">4</div><div class="step-body"><div class="title">First organizational meeting &mdash; Adopt Bylaws</div><div class="desc">Bylaws = internal rules of management. Cover voting requirements, how directors are elected and replaced.</div></div></div>
+  <h3>Piercing the Corporate Veil <span class="exam-tag">HIGH YIELD</span></h3>
+  <div class="card card-coral"><strong>When courts pierce the veil:</strong><p>When the corporate privilege is abused for personal benefit or when the corporate business is treated so carelessly it&rsquo;s indistinguishable from the controlling shareholder&rsquo;s personal affairs. Result: shareholders become personally liable for corporate debts.</p></div>
+  <div class="tbl-wrap"><table>
+    <tr><th>Veil-Piercing Factor</th><th>What It Means</th></tr>
+    <tr><td>Commingling</td><td>Mixing personal and corporate funds so they can&rsquo;t be separated</td></tr>
+    <tr><td>Ignoring corporate formalities</td><td>Not holding required meetings, not keeping minutes, not maintaining separate records</td></tr>
+    <tr><td>Undercapitalization</td><td>Corporation set up never to make a profit or always to be insolvent</td></tr>
+    <tr><td>Fraud</td><td>Using the corporation to deceive third parties</td></tr>
+    <tr><td>Alter ego</td><td>Corporation is simply the personal tool of the individual</td></tr>
+  </table></div>
+  <h3>Corporate Financing: Stocks vs. Bonds <span class="exam-tag">HIGH YIELD</span></h3>
+  <div class="tbl-wrap"><table>
+    <tr><th></th><th>Common Stock</th><th>Preferred Stock</th><th>Bonds</th></tr>
+    <tr><td><strong>Type</strong></td><td>Equity (ownership)</td><td>Equity (ownership)</td><td>Debt (corporation borrowing)</td></tr>
+    <tr><td><strong>Voting</strong></td><td>1 vote per share</td><td>Usually no vote</td><td>No vote</td></tr>
+    <tr><td><strong>Dividends</strong></td><td>No guarantee; declared by board</td><td>Fixed dividend; priority over common</td><td>Fixed interest (must be paid)</td></tr>
+    <tr><td><strong>Maturity</strong></td><td>None</td><td>None</td><td>Has a maturity date</td></tr>
+    <tr><td><strong>Priority on dissolution</strong></td><td>Last</td><td>Before common; after bonds</td><td>First (ahead of all stockholders)</td></tr>
+    <tr><td><strong>Upside potential</strong></td><td>High (share price appreciation)</td><td>Limited</td><td>None (fixed return)</td></tr>
+  </table></div>
+  <h3>Exam Traps &mdash; Corporations</h3>
+  <div class="trap-card"><div class="trap-title">Trap 1</div><p>&ldquo;Public corporation&rdquo; = government-owned (Amtrak, USPS). &ldquo;Publicly held corporation&rdquo; = traded on stock exchange. These are completely different concepts.</p></div>
+  <div class="trap-card"><div class="trap-title">Trap 2</div><p>Double taxation: corporation pays tax on earnings, AND shareholders pay tax on dividends. This is the main disadvantage of the corporate form. LLCs avoid this with pass-through taxation.</p></div>
+  <div class="trap-card"><div class="trap-title">Trap 3</div><p>Bonds are DEBT &mdash; bondholders are creditors, not owners. Bondholders get paid before stockholders in any dissolution.</p></div>
+</div>
+
+<!-- ══ CH 40 DIRECTORS OFFICERS SHAREHOLDERS ══ -->
+<div class="section" id="s-ch40">
+  <h2>Chapter 40 &mdash; Directors, Officers &amp; Shareholders</h2>
+  <p class="section-intro">The internal governance of a corporation. Board sets policy, officers execute, shareholders own but don&rsquo;t manage. All fiduciaries owe duties of care and loyalty.</p>
+  <h3>Directors vs. Officers <span class="exam-tag">HIGH YIELD</span></h3>
+  <div class="grid2">
+    <div class="card card-blue"><strong>Board of Directors</strong><ul><li>Ultimate authority in every corporation</li><li><strong>NOT agents</strong> &mdash; no individual director can bind the corporation alone</li><li>Policy decisions: selecting officers, declaring dividends, capital structure</li><li>Act as a BODY; each director gets one vote; majority rules</li><li>Elected by shareholders annually (or staggered terms)</li><li>Can be removed for cause; states differ on without-cause removal</li></ul></div>
+    <div class="card card-teal"><strong>Corporate Officers</strong><ul><li>Hired by the board of directors</li><li><strong>ARE agents</strong> of the corporation</li><li>Run daily operations (CEO, CFO, VP, Secretary)</li><li>Rights defined by employment contracts</li><li>Board can remove any officer at any time with or without cause</li><li>Can hold multiple offices; can be both officer and director</li></ul></div>
+  </div>
+  <h3>Board Committees (Required for Public Companies)</h3>
+  <div class="grid3">
+    <div class="card card-coral"><strong>Audit Committee</strong><p>SOX requires: independent directors only + at least 1 member with finance/accounting expertise.</p></div>
+    <div class="card card-gold"><strong>Compensation Committee</strong><p>SEC &amp; NYSE require independent directors only. Sets executive pay.</p></div>
+    <div class="card card-teal"><strong>Nominating/Governance Committee</strong><p>SEC &amp; NYSE require independent directors only. Nominates new directors.</p></div>
+  </div>
+  <h3>Directors&rsquo; Rights</h3>
+  <div class="grid3">
+    <div class="card"><strong>Participation</strong><p>Right to attend and vote at ALL board meetings. Must receive notice of meetings.</p></div>
+    <div class="card"><strong>Inspection</strong><p>Access to ALL books, records, facilities, premises. Almost absolute right &mdash; cannot be restricted by articles, bylaws, or board action.</p></div>
+    <div class="card"><strong>Indemnification</strong><p>Right to reimbursement of legal costs, fees, and damages incurred by virtue of position as director.</p></div>
+  </div>
+  <h3>Duty of Care <span class="exam-tag">HIGH YIELD</span></h3>
+  <div class="card card-blue"><p>Directors and officers must: (1) act in <strong style="color:var(--text)">good faith</strong>, (2) exercise the care an <strong style="color:var(--text)">ordinarily prudent person</strong> would exercise in similar circumstances, and (3) act in what they believe is the <strong style="color:var(--text)">best interests of the corporation</strong>.</p></div>
+  <div class="callout"><strong>Duty to make informed decisions:</strong> Must investigate, study, discuss, and evaluate alternatives before deciding. Can rely on reports from: competent officers/employees, outside professionals, and board committees.</div>
+  <h3>Business Judgment Rule (BJR) <span class="exam-tag">HIGH YIELD</span></h3>
+  <div class="card card-green"><strong>Protection from liability for good-faith business decisions</strong><p>Courts will NOT hold directors/officers liable for honest mistakes of judgment or bad business decisions IF all three conditions are met:</p>
+    <ul style="margin-top:8px;padding-left:1.1rem;">
+      <li style="font-size:13px;color:var(--text2);margin-bottom:3px;">Took <strong style="color:var(--text)">reasonable steps</strong> to become informed</li>
+      <li style="font-size:13px;color:var(--text2);margin-bottom:3px;">Had a <strong style="color:var(--text)">rational basis</strong> for the decision</li>
+      <li style="font-size:13px;color:var(--text2);">No <strong style="color:var(--text)">personal conflict</strong> between self-interest and corporation&rsquo;s interest</li>
+    </ul>
+  </div>
+  <div class="warn"><strong>BJR does NOT apply if:</strong> Bad faith, fraud, or clear breach of fiduciary duties. Courts consider the reasonableness of a decision at the TIME it was made &mdash; no benefit of hindsight.</div>
+  <h3>Duty of Loyalty <span class="exam-tag">HIGH YIELD</span></h3>
+  <div class="card card-coral"><p>Directors and officers must subordinate their personal interests to the welfare of the corporation. Key applications:</p>
+    <ul style="margin-top:8px;padding-left:1.1rem;">
+      <li style="font-size:13px;color:var(--text2);margin-bottom:3px;"><strong style="color:var(--text)">No competing with the corporation</strong></li>
+      <li style="font-size:13px;color:var(--text2);margin-bottom:3px;"><strong style="color:var(--text)">Corporate opportunity doctrine:</strong> Cannot usurp a business opportunity that belongs to the corporation</li>
+      <li style="font-size:13px;color:var(--text2)"><strong style="color:var(--text)">No self-dealing:</strong> Cannot benefit personally from corporate transactions without full disclosure</li>
+    </ul>
+  </div>
+  <h3>Conflicts of Interest Procedure</h3>
+  <div class="flow-step"><div class="step-num">1</div><div class="step-body"><div class="title">Full disclosure</div><div class="desc">Director must disclose the nature of the conflicting interest</div></div></div>
+  <div class="flow-step"><div class="step-num">2</div><div class="step-body"><div class="title">Disclose all pertinent facts</div><div class="desc">All information relevant to the transaction must be shared with the board</div></div></div>
+  <div class="flow-step"><div class="step-num">3</div><div class="step-body"><div class="title">Abstain from voting</div><div class="desc">Conflicted director must NOT vote on the proposed transaction</div></div></div>
+  <h3>Shareholder Rights &amp; Powers</h3>
+  <div class="grid2">
+    <div class="card card-teal"><strong>Shareholders Must Approve Fundamental Changes</strong><ul><li>Amend articles of incorporation or bylaws</li><li>Mergers</li><li>Dissolve the corporation</li><li>Sell all or substantially all corporate assets</li><li>Elect or remove directors</li></ul></div>
+    <div class="card card-blue"><strong>Voting Mechanics</strong><ul><li>1 vote per share (common stock)</li><li>Quorum = 50%+ of outstanding shares present</li><li>Majority of shares present passes resolutions</li><li>Proxies allowed (shareholder appoints agent to vote)</li><li>Cumulative voting = minority shareholder protection</li></ul></div>
+  </div>
+  <h3>Shareholder Derivative Suit <span class="exam-tag">HIGH YIELD</span></h3>
+  <div class="card card-purple"><strong>What it is:</strong><p>A suit brought by a shareholder to enforce a corporate cause of action when directors fail to act on the corporation&rsquo;s behalf.</p>
+  <p style="margin-top:6px;font-size:13px;color:var(--text2);"><strong style="color:var(--text)">Process:</strong> (1) Shareholder must first submit a <strong style="color:var(--text)">written demand</strong> to the board, asking them to take action. (2) If board refuses or fails to act, shareholder may file suit. <strong style="color:var(--text)">Damages recovered go to the CORPORATION</strong>, not to the suing shareholder personally.</p></div>
+  <h3>Exam Traps &mdash; Directors, Officers &amp; Shareholders</h3>
+  <div class="trap-card"><div class="trap-title">Trap 1</div><p>Directors are NOT agents. A single director cannot bind the corporation. They must act as a group. Officers ARE agents and can bind the corporation individually.</p></div>
+  <div class="trap-card"><div class="trap-title">Trap 2</div><p>In a derivative suit, the damages go to the CORPORATION, not to the shareholders personally, even though shareholders brought the suit.</p></div>
+  <div class="trap-card"><div class="trap-title">Trap 3</div><p>BJR protects honest mistakes &mdash; but NOT if the director was uninformed, had a personal interest, or acted in bad faith. All three conditions must be met for protection.</p></div>
+  <div class="trap-card"><div class="trap-title">Trap 4</div><p>Director inspection right is almost absolute &mdash; it cannot be restricted by the articles, bylaws, or any act of the board of directors.</p></div>
+</div>
+
+<!-- ══ KEY TERMS ══ -->
+<div class="section" id="s-terms">
+  <h2>Key Terms Master List</h2>
+  <p class="section-intro">All major terms likely to be tested. Sorted alphabetically.</p>
+  <div class="card">
+    <div class="glossary-item"><div class="glossary-term">Agency</div><div class="glossary-def">Fiduciary relationship where agent acts on behalf of and subject to control of principal.</div></div>
+    <div class="glossary-item"><div class="glossary-term">Agency by Agreement</div><div class="glossary-def">Agency created by express or implied consent between principal and agent. No writing required.</div></div>
+    <div class="glossary-item"><div class="glossary-term">Agency by Estoppel</div><div class="glossary-def">Created when principal&rsquo;s conduct causes third party to reasonably believe agency exists; principal cannot deny it.</div></div>
+    <div class="glossary-item"><div class="glossary-term">Agency by Ratification</div><div class="glossary-def">Created when a non-agent acts on another&rsquo;s behalf and the other later approves the act by words or conduct.</div></div>
+    <div class="glossary-item"><div class="glossary-term">Articles of Incorporation</div><div class="glossary-def">Document filed with the secretary of state to form a corporation. Primary source of corporate authority.</div></div>
+    <div class="glossary-item"><div class="glossary-term">Articles of Organization</div><div class="glossary-def">Document filed with the secretary of state to form an LLC.</div></div>
+    <div class="glossary-item"><div class="glossary-term">Automatic Stay</div><div class="glossary-def">Suspension of virtually all litigation and collection actions against the debtor, effective the moment bankruptcy is filed.</div></div>
+    <div class="glossary-item"><div class="glossary-term">Bond</div><div class="glossary-def">A debt security representing money borrowed by the corporation. Has a maturity date and fixed interest payments. Bondholders are creditors, not owners.</div></div>
+    <div class="glossary-item"><div class="glossary-term">Business Judgment Rule</div><div class="glossary-def">Courts will not hold directors/officers liable for good-faith business decisions if they were reasonably informed, had a rational basis, and had no personal conflict.</div></div>
+    <div class="glossary-item"><div class="glossary-term">Bylaws</div><div class="glossary-def">Internal rules of management adopted by a corporation at its first organizational meeting.</div></div>
+    <div class="glossary-item"><div class="glossary-term">Chapter 7</div><div class="glossary-def">Liquidation bankruptcy. Nonexempt assets sold by trustee; debtor discharged of remaining debts.</div></div>
+    <div class="glossary-item"><div class="glossary-term">Chapter 11</div><div class="glossary-def">Reorganization bankruptcy. Debtor continues as DIP; repayment plan restructures debts.</div></div>
+    <div class="glossary-item"><div class="glossary-term">Chapter 12</div><div class="glossary-def">Bankruptcy for family farmers and fishermen with regular income.</div></div>
+    <div class="glossary-item"><div class="glossary-term">Chapter 13</div><div class="glossary-def">Bankruptcy for individuals with regular income; 3&ndash;5 year repayment plan.</div></div>
+    <div class="glossary-item"><div class="glossary-term">Close Corporation</div><div class="glossary-def">Corporation with a small number of shareholders (often family members); no public trading market for shares.</div></div>
+    <div class="glossary-item"><div class="glossary-term">Commingling</div><div class="glossary-def">Mixing personal and business funds or property so they lose separate identity. Triggers veil piercing.</div></div>
+    <div class="glossary-item"><div class="glossary-term">Common Stock</div><div class="glossary-def">Equity security giving ownership in the corporation; 1 vote per share; last in line for dividends and dissolution.</div></div>
+    <div class="glossary-item"><div class="glossary-term">Control Test</div><div class="glossary-def">Used to determine employee vs. IC status. Most important factor: degree of employer control over details of work.</div></div>
+    <div class="glossary-item"><div class="glossary-term">Corporate Opportunity Doctrine</div><div class="glossary-def">Directors and officers cannot take for themselves a business opportunity that belongs to the corporation without first offering it to the corporation.</div></div>
+    <div class="glossary-item"><div class="glossary-term">Cram-Down</div><div class="glossary-def">Ch 11 provision allowing court to confirm a reorganization plan even if only one class of creditors accepted it, if the plan is fair and equitable.</div></div>
+    <div class="glossary-item"><div class="glossary-term">Cumulative Voting</div><div class="glossary-def">Voting method allowing minority shareholders to concentrate votes; total votes = shares x directors being elected; all votes can go to one candidate.</div></div>
+    <div class="glossary-item"><div class="glossary-term">Debtor in Possession (DIP)</div><div class="glossary-def">In Ch 11, the debtor who continues to operate the business after order for relief is entered.</div></div>
+    <div class="glossary-item"><div class="glossary-term">Derivative Suit</div><div class="glossary-def">A suit brought by a shareholder on behalf of the corporation when directors fail to act. Must first demand board action. Damages go to the corporation.</div></div>
+    <div class="glossary-item"><div class="glossary-term">Discharge</div><div class="glossary-def">Court order voiding a debtor&rsquo;s debts and preventing future collection. Gives debtor a fresh start.</div></div>
+    <div class="glossary-item"><div class="glossary-term">Dissociation</div><div class="glossary-def">Departure of a member (LLC) or partner (partnership) from the entity. Entity may continue. Different from dissolution.</div></div>
+    <div class="glossary-item"><div class="glossary-term">Dissolution</div><div class="glossary-def">The formal disbanding and winding up of a business entity.</div></div>
+    <div class="glossary-item"><div class="glossary-term">Dividend</div><div class="glossary-def">Distribution of corporate profits to shareholders in proportion to shares held.</div></div>
+    <div class="glossary-item"><div class="glossary-term">Domestic Corporation</div><div class="glossary-def">A corporation organized under the law of the state where it does business.</div></div>
+    <div class="glossary-item"><div class="glossary-term">Double Taxation</div><div class="glossary-def">Corporate profits taxed at entity level; dividends paid to shareholders taxed again at personal level. Main disadvantage of corporations.</div></div>
+    <div class="glossary-item"><div class="glossary-term">Duty of Care</div><div class="glossary-def">Obligation of directors/officers to act in good faith, exercise ordinary prudence, and act in the corporation&rsquo;s best interests.</div></div>
+    <div class="glossary-item"><div class="glossary-term">Duty of Loyalty</div><div class="glossary-def">Obligation to subordinate personal interests to the corporation&rsquo;s welfare. No self-dealing, no usurping opportunities, no competing.</div></div>
+    <div class="glossary-item"><div class="glossary-term">Estate in Bankruptcy</div><div class="glossary-def">All property interests of the debtor at the time of filing; created at commencement of Ch 7.</div></div>
+    <div class="glossary-item"><div class="glossary-term">Fiduciary</div><div class="glossary-def">A person with duty to act primarily for another&rsquo;s benefit; relationship founded on trust and confidence.</div></div>
+    <div class="glossary-item"><div class="glossary-term">Foreign Corporation</div><div class="glossary-def">A corporation doing business in a state where it is not incorporated.</div></div>
+    <div class="glossary-item"><div class="glossary-term">Fraudulent Transfer</div><div class="glossary-def">Transfer made within 2 years of filing with intent to hinder, delay, or defraud creditors. Trustee can void it.</div></div>
+    <div class="glossary-item"><div class="glossary-term">Independent Contractor (IC)</div><div class="glossary-def">Worker whose working conditions and methods are NOT controlled by the employer. Not subject to employment laws.</div></div>
+    <div class="glossary-item"><div class="glossary-term">Joint Liability</div><div class="glossary-def">All partners can be held liable for the full amount of a partnership obligation.</div></div>
+    <div class="glossary-item"><div class="glossary-term">LLC</div><div class="glossary-def">Limited Liability Company. Hybrid entity with limited liability (like a corp) and pass-through taxation (like a partnership).</div></div>
+    <div class="glossary-item"><div class="glossary-term">Means Test</div><div class="glossary-def">Test comparing debtor&rsquo;s income to state median to determine eligibility for Ch 7. Income $6,000+ above median = abuse presumed.</div></div>
+    <div class="glossary-item"><div class="glossary-term">Operating Agreement</div><div class="glossary-def">Agreement among LLC members governing management, operations, profit distribution, and dissolution. Not required but strongly recommended in writing.</div></div>
+    <div class="glossary-item"><div class="glossary-term">Order for Relief</div><div class="glossary-def">Court&rsquo;s grant of bankruptcy protection. For voluntary petitions, the filing itself constitutes the order.</div></div>
+    <div class="glossary-item"><div class="glossary-term">Partnership</div><div class="glossary-def">An agreement by 2+ persons to carry on, as co-owners, a business for profit.</div></div>
+    <div class="glossary-item"><div class="glossary-term">Pass-Through Entity</div><div class="glossary-def">Business entity with no tax liability; income passes through to owners who pay personal tax. Partnerships, LLCs, S-Corps.</div></div>
+    <div class="glossary-item"><div class="glossary-term">Preference (Bankruptcy)</div><div class="glossary-def">Payment to one creditor within 90 days of filing that gave that creditor more than they would have received in bankruptcy. Trustee can recover it.</div></div>
+    <div class="glossary-item"><div class="glossary-term">Preferred Stock</div><div class="glossary-def">Equity security with fixed dividend priority over common stock. Usually no voting rights. Priority over common stock on dissolution.</div></div>
+    <div class="glossary-item"><div class="glossary-term">Principal</div><div class="glossary-def">The party in an agency relationship who authorizes the agent to act on their behalf. Must have contractual capacity.</div></div>
+    <div class="glossary-item"><div class="glossary-term">Proxy</div><div class="glossary-def">Authorization for someone else to vote a shareholder&rsquo;s shares at a corporate meeting.</div></div>
+    <div class="glossary-item"><div class="glossary-term">Ratification</div><div class="glossary-def">A principal&rsquo;s approval of an unauthorized act by an agent or non-agent, which creates a binding agency relationship retroactively.</div></div>
+    <div class="glossary-item"><div class="glossary-term">S Corporation</div><div class="glossary-def">A close corporation taxed as a partnership under the IRS code. Max 100 shareholders; domestic only; no affiliated group members.</div></div>
+    <div class="glossary-item"><div class="glossary-term">Strong-Arm Power</div><div class="glossary-def">Trustee&rsquo;s power to act as a judicial lien creditor against the debtor&rsquo;s property; allows trustee to void certain transfers.</div></div>
+    <div class="glossary-item"><div class="glossary-term">UPA</div><div class="glossary-def">Uniform Partnership Act. Governs operation of partnerships in the absence of an express partnership agreement.</div></div>
+    <div class="glossary-item"><div class="glossary-term">Veil Piercing</div><div class="glossary-def">Court action disregarding the corporate (or LLC) entity and holding shareholders/members personally liable for entity debts.</div></div>
+    <div class="glossary-item"><div class="glossary-term">Workout</div><div class="glossary-def">Private, negotiated debt adjustment between debtor and creditors to avoid formal bankruptcy. More flexible and cheaper.</div></div>
+    <div class="glossary-item"><div class="glossary-term">Winding Up</div><div class="glossary-def">Second stage of termination: collecting and liquidating assets, paying liabilities, and distributing remainder.</div></div>
+  </div>
+</div>
+
+<!-- ══ COMPARISON CHARTS ══ -->
+<div class="section" id="s-charts">
+  <h2>Comparison Charts</h2>
+  <p class="section-intro">Side-by-side comparisons of the concepts most likely to be tested.</p>
+  <h3>Chapter 7 vs. 11 vs. 12 vs. 13</h3>
+  <div class="tbl-wrap"><table>
+    <tr><th></th><th>Chapter 7</th><th>Chapter 11</th><th>Chapter 12</th><th>Chapter 13</th></tr>
+    <tr><td><strong>Name</strong></td><td>Liquidation</td><td>Reorganization</td><td>Family Farmers/Fishermen</td><td>Individual Adjustment</td></tr>
+    <tr><td><strong>Who uses it</strong></td><td>Individuals &amp; businesses</td><td>Businesses (primarily)</td><td>Family farmers &amp; fishermen</td><td>Individuals with regular income</td></tr>
+    <tr><td><strong>What happens</strong></td><td>Assets liquidated; debts discharged</td><td>Debt reorganized; business continues</td><td>Debt adjusted; operations continue</td><td>3&ndash;5 year repayment plan</td></tr>
+    <tr><td><strong>Trustee</strong></td><td>Yes &mdash; administers estate</td><td>DIP usually; trustee if mismanagement</td><td>Debtor continues with trustee oversight</td><td>Trustee oversees repayment</td></tr>
+    <tr><td><strong>Means test</strong></td><td>Yes &mdash; income vs. state median</td><td>No</td><td>No</td><td>No</td></tr>
+    <tr><td><strong>Discharge</strong></td><td>On completion &mdash; remaining debts discharged</td><td>After plan completed (individuals)</td><td>After plan completion</td><td>After plan completion</td></tr>
+  </table></div>
+  <h3>Actual Authority vs. Apparent Authority</h3>
+  <div class="tbl-wrap"><table>
+    <tr><th></th><th>Actual Authority</th><th>Apparent Authority</th></tr>
+    <tr><td><strong>Source</strong></td><td>Principal&rsquo;s express or implied grant to the agent</td><td>Principal&rsquo;s conduct that makes third party believe agent has authority</td></tr>
+    <tr><td><strong>Types</strong></td><td>Express (explicit) or Implied (reasonably necessary)</td><td>Always apparent (not express or implied)</td></tr>
+    <tr><td><strong>Who creates it</strong></td><td>Principal to agent directly</td><td>Principal&rsquo;s actions toward THIRD PARTY</td></tr>
+    <tr><td><strong>Agent knows about it?</strong></td><td>Yes</td><td>Agent may not even be aware</td></tr>
+    <tr><td><strong>Principal bound?</strong></td><td>Yes</td><td>Yes &mdash; estopped from denying authority</td></tr>
+  </table></div>
+  <h3>Employee vs. Independent Contractor</h3>
+  <div class="tbl-wrap"><table>
+    <tr><th></th><th>Employee</th><th>Independent Contractor</th></tr>
+    <tr><td><strong>Control</strong></td><td>Employer controls details of work</td><td>Worker controls own methods</td></tr>
+    <tr><td><strong>Benefits/taxes</strong></td><td>Employer withholds taxes, pays SS, workers&rsquo; comp</td><td>Worker pays own taxes; no benefits</td></tr>
+    <tr><td><strong>Overtime</strong></td><td>1.5x after 40 hours/week required</td><td>No overtime rules apply</td></tr>
+    <tr><td><strong>Copyright (work for hire)</strong></td><td>Employer owns copyright to work product</td><td>IC retains copyright (unless agreement)</td></tr>
+    <tr><td><strong>Employment laws</strong></td><td>All apply (discrimination, OSHA, etc.)</td><td>Do NOT apply</td></tr>
+    <tr><td><strong>Liability (respondeat superior)</strong></td><td>Employer liable for torts within scope of employment</td><td>Employer generally NOT liable for IC&rsquo;s torts</td></tr>
+  </table></div>
+  <h3>Partnership vs. LLC vs. Corporation</h3>
+  <div class="tbl-wrap"><table>
+    <tr><th></th><th>General Partnership</th><th>LLC</th><th>Corporation</th></tr>
+    <tr><td><strong>Formation</strong></td><td>Agreement (oral/written)</td><td>Articles of Organization</td><td>Articles of Incorporation</td></tr>
+    <tr><td><strong>Liability</strong></td><td>Unlimited personal liability</td><td>Limited to investment</td><td>Limited to investment</td></tr>
+    <tr><td><strong>Taxation</strong></td><td>Pass-through</td><td>Pass-through (default)</td><td>Double taxation (default)</td></tr>
+    <tr><td><strong>Management</strong></td><td>Equal management (all partners)</td><td>Member-managed (default)</td><td>Board of Directors</td></tr>
+    <tr><td><strong>Agency</strong></td><td>Each partner = agent of other partners</td><td>Members/managers can be agents</td><td>Officers = agents; directors NOT agents</td></tr>
+    <tr><td><strong>Profit sharing</strong></td><td>Equally by default</td><td>Equally by default</td><td>Per share ownership</td></tr>
+    <tr><td><strong>Fundamental changes</strong></td><td>Unanimous vote</td><td>Per operating agreement</td><td>Shareholder approval required</td></tr>
+  </table></div>
+  <h3>Common Stock vs. Preferred Stock vs. Bonds</h3>
+  <div class="tbl-wrap"><table>
+    <tr><th></th><th>Common Stock</th><th>Preferred Stock</th><th>Bonds</th></tr>
+    <tr><td><strong>Type</strong></td><td>Equity (ownership)</td><td>Equity (ownership)</td><td>Debt</td></tr>
+    <tr><td><strong>Voting</strong></td><td>Yes (1 per share)</td><td>Usually no</td><td>No</td></tr>
+    <tr><td><strong>Income</strong></td><td>Dividends (not guaranteed)</td><td>Fixed dividends (priority)</td><td>Fixed interest (must pay)</td></tr>
+    <tr><td><strong>Priority on dissolution</strong></td><td>Last</td><td>After bonds, before common</td><td>First (creditor priority)</td></tr>
+    <tr><td><strong>Maturity</strong></td><td>None</td><td>None</td><td>Has maturity date</td></tr>
+  </table></div>
+  <h3>Dissociation vs. Dissolution</h3>
+  <div class="tbl-wrap"><table>
+    <tr><th></th><th>Dissociation</th><th>Dissolution</th></tr>
+    <tr><td><strong>What happens</strong></td><td>One member/partner leaves the entity</td><td>The entire entity is wound up and terminated</td></tr>
+    <tr><td><strong>Entity continues?</strong></td><td>Yes (usually)</td><td>No &mdash; winding up begins</td></tr>
+    <tr><td><strong>Trigger</strong></td><td>Voluntary withdrawal, death, bankruptcy, expulsion</td><td>Agreement, expiration of term, court order</td></tr>
+    <tr><td><strong>Departing party</strong></td><td>Receives buyout at fair value</td><td>All parties receive share after winding up</td></tr>
+    <tr><td><strong>After dissociation (LLC)</strong></td><td>Loyalty ends; care continues for pre-events; loses agency authority</td><td>N/A &mdash; entity is ending</td></tr>
+  </table></div>
+  <h3>Duty of Care vs. Duty of Loyalty</h3>
+  <div class="tbl-wrap"><table>
+    <tr><th></th><th>Duty of Care</th><th>Duty of Loyalty</th></tr>
+    <tr><td><strong>Applies to</strong></td><td>Directors, officers, partners, LLC members</td><td>Directors, officers, partners, LLC members</td></tr>
+    <tr><td><strong>Core obligation</strong></td><td>Act in good faith, with prudence, in best interests of entity</td><td>Put entity&rsquo;s interests above your own</td></tr>
+    <tr><td><strong>Standard (partners)</strong></td><td>Gross negligence standard only</td><td>No competing, no self-dealing, no usurping opportunities</td></tr>
+    <tr><td><strong>Standard (corp directors)</strong></td><td>Ordinary prudence + informed decision</td><td>Full disclosure + abstain from conflicted votes</td></tr>
+    <tr><td><strong>Protected by BJR?</strong></td><td>Yes &mdash; if informed, rational, no conflict</td><td>No &mdash; self-dealing is never protected by BJR</td></tr>
+    <tr><td><strong>Breach examples</strong></td><td>Making decision without investigating, ignoring red flags</td><td>Stealing corporate opportunity, secret self-dealing, competing with entity</td></tr>
+  </table></div>
+</div>
+
+<!-- ══ QUIZ ══ -->
+<div class="section" id="s-quiz">
+  <h2>Practice Quiz &mdash; 40 Questions</h2>
+  <p class="section-intro">All questions based on material from class lectures and the exam review. Click to reveal answers.</p>
+  <div class="quiz-filter">
+    <button class="filter-btn active" onclick="filterQuiz('all',this)">All (40)</button>
+    <button class="filter-btn" onclick="filterQuiz('ch31',this)">Ch 31</button>
+    <button class="filter-btn" onclick="filterQuiz('ch32',this)">Ch 32</button>
+    <button class="filter-btn" onclick="filterQuiz('ch37',this)">Ch 37</button>
+    <button class="filter-btn" onclick="filterQuiz('ch38',this)">Ch 38</button>
+    <button class="filter-btn" onclick="filterQuiz('ch39',this)">Ch 39</button>
+    <button class="filter-btn" onclick="filterQuiz('ch40',this)">Ch 40</button>
+  </div>
+  <div id="quiz-score-bar" class="quiz-score-bar">Score: <span id="score-display">0</span> correct / <span id="total-display">0</span> answered</div>
+  <div id="quiz-container"></div>
+</div>
+
+</main>
+</div>
+<footer class="site-footer">MGMT 312 &middot; Commercial Law &middot; Exam 3 &middot; Prof. McDonald &middot; Spring 2026</footer>
+
+<script>
+const questions=[
+  // CH31 BANKRUPTCY
+  {cat:'ch31',q:"What are the two primary goals of bankruptcy law?",opts:["Punish debtors and reward creditors","Give debtor a fresh start and ensure equitable treatment of all creditors","Liquidate all assets as quickly as possible","Protect secured creditors above all others"],ans:1,exp:"Bankruptcy has two goals: (1) protect the debtor by giving a fresh start free from certain creditor claims, and (2) ensure equitable treatment of all creditors competing for limited assets."},
+  {cat:'ch31',q:"An automatic stay in bankruptcy proceedings is effective:",opts:["Only after the court issues a separate order","Only after the first creditors meeting","The moment the debtor files the petition","30 days after the petition is filed"],ans:2,exp:"The automatic stay is effective the instant the petition is filed. No separate court order is required. It immediately stops virtually all collection actions."},
+  {cat:'ch31',q:"Which of the following actions is NOT prohibited by the automatic stay?",opts:["Filing a new lawsuit against the debtor","Repossessing the debtor's property","Collecting child support payments","Continuing collection calls to the debtor"],ans:2,exp:"Domestic support obligations (including child support) are a specific exception to the automatic stay. These proceedings can continue. All other options listed are stopped by the automatic stay."},
+  {cat:'ch31',q:"The means test for Chapter 7 eligibility compares the debtor's income to:",opts:["The poverty line","The federal minimum wage","The median family income in the debtor's state","The average income of all bankruptcy filers"],ans:2,exp:"The means test compares the debtor's average income to the median family income in the state where the petition is filed. If income exceeds the median by $6,000 or more, abuse is presumed."},
+  {cat:'ch31',q:"A trustee can recover a preferential payment if it was made within how many days of the bankruptcy filing?",opts:["30 days","60 days","90 days","180 days"],ans:2,exp:"The preference lookback period is 90 days before filing. For insiders (family members, business partners), the period extends to 1 year."},
+  {cat:'ch31',q:"A debtor sells her car worth $15,000 to her sister for $500 eighteen months before filing bankruptcy. This is most likely a:",opts:["Preference","Fraudulent transfer","Valid exempt transfer","Non-voidable transaction since it was before the preference period"],ans:1,exp:"This is a fraudulent transfer — made to an insider for far below market value within the 2-year lookback period with apparent intent to hinder creditors. (It could also be argued as a preference since the sister is an insider and the 1-year rule applies, but the undervalue sale more directly signals fraudulent transfer.)"},
+  {cat:'ch31',q:"Which of the following debts can be discharged in bankruptcy?",opts:["Student loans","Child support obligations","Credit card debt","DUI-related personal injury judgment"],ans:2,exp:"General credit card debt (general unsecured debt) can be discharged in Chapter 7 bankruptcy. Student loans, domestic support, and DUI judgments are all non-dischargeable debts."},
+  {cat:'ch31',q:"In bankruptcy, which class of creditor is paid FIRST?",opts:["General unsecured creditors","Priority unsecured creditors","Secured creditors (from their collateral)","Shareholders"],ans:2,exp:"Secured creditors are paid first from the proceeds of their specific collateral. Then priority unsecured creditors (domestic support has highest priority within this class), then general unsecured, then shareholders."},
+  {cat:'ch31',q:"In a Chapter 11 reorganization, who is typically allowed to continue operating the business?",opts:["A court-appointed receiver","The secured creditors","The debtor, as a debtor in possession (DIP)","The bankruptcy trustee in all cases"],ans:2,exp:"In Chapter 11, the debtor usually continues as the Debtor in Possession (DIP) and operates the business. A trustee is appointed only if there is gross mismanagement or it is in the best interests of the estate."},
+  {cat:'ch31',q:"A debtor had two bankruptcy petitions dismissed in the prior year. What is the effect on the automatic stay?",opts:["The stay is doubled in duration","The stay is presumed to be in bad faith and does not automatically take effect","The stay is shortened to 30 days","No effect on the stay"],ans:1,exp:"If the debtor had 2+ bankruptcy petitions dismissed in the prior year, the Code presumes bad faith, and the automatic stay does NOT go into effect automatically. The court must determine the petition was filed in good faith before the stay activates."},
+  // CH32 AGENCY
+  {cat:'ch32',q:"Which situation creates agency by estoppel?",opts:["A neighbor hires a plumber after a water leak","A company gives an employee business cards and an office, leading a third party to believe the employee has authority","A minor volunteers to work unpaid for a store","A bank approves a loan for a small business"],ans:1,exp:"Agency by estoppel is created by the PRINCIPAL's actions (giving business cards and office) that cause a third party to reasonably believe an agency exists. The company is estopped from denying the agency."},
+  {cat:'ch32',q:"Paul authorizes his agent Abel to buy inventory up to $10,000. Abel buys $25,000 worth, and Paul accepts the inventory. This creates agency by:",opts:["Agreement","Ratification","Estoppel","Operation of law"],ans:1,exp:"Ratification occurs when a principal approves (by words or conduct) an unauthorized act by an agent. Paul's acceptance and use of the inventory ratifies Abel's unauthorized purchase, binding Paul to the full $25,000."},
+  {cat:'ch32',q:"The MOST important factor in determining if a worker is an employee or independent contractor is:",opts:["Whether the worker has a formal contract","The duration of the working relationship","The degree of control the employer exercises over the details of the work","Whether the worker uses the employer's tools"],ans:2,exp:"The control test's most important factor is how much control the employer exercises over the DETAILS of the work and day-to-day activities. This is the primary factor used by both courts and the IRS."},
+  {cat:'ch32',q:"Which of the following is NOT one of an agent's five duties to the principal?",opts:["Loyalty","Compensation","Obedience","Accounting"],ans:1,exp:"Compensation is a PRINCIPAL's duty to the agent, not an agent's duty to the principal. The agent's five duties are: Performance, Notification, Loyalty, Obedience, and Accounting (PNLOA)."},
+  {cat:'ch32',q:"An agent accepts concert tickets worth $500 from a vendor who is bidding for a contract with the principal's company. The agent has breached the duty of:",opts:["Performance","Notification","Loyalty","Obedience"],ans:2,exp:"The duty of loyalty requires the agent to act solely for the principal's benefit. Accepting gifts from a vendor bidding for the principal's business is an undisclosed benefit that violates loyalty — the agent must act without any self-interest."},
+  {cat:'ch32',q:"The law assumes the principal knows any information the agent acquires that is relevant to the agency:",opts:["Only if the agent actually communicated it to the principal","Regardless of whether the agent actually told the principal","Only if the information was in writing","Only for express actual authority situations"],ans:1,exp:"The notification duty means the law imputes the agent's knowledge to the principal. The principal is deemed to know anything the agent learns through the agency, whether or not the agent actually passes it on."},
+  {cat:'ch32',q:"Agency for an illegal purpose is:",opts:["Enforceable if both parties consent","Unenforceable","Valid only if in writing","Valid only with consideration"],ans:1,exp:"An agency relationship created for an illegal purpose or one contrary to public policy is unenforceable. The legal purpose requirement is fundamental."},
+  // CH37 PARTNERSHIPS
+  {cat:'ch37',q:"Which of the following is the STRONGEST indicator that a partnership exists?",opts:["Two people own property together","Two people share in the profits of a business","Two people work in the same office building","Two people have the same employer"],ans:1,exp:"Profit sharing is the strongest indicator of a partnership. Receiving a share of profits is prima facie evidence of a partnership under the UPA. Joint property ownership alone does not create a partnership."},
+  {cat:'ch37',q:"A decision that fundamentally changes the nature of a general partnership requires:",opts:["A majority vote","A two-thirds vote","A senior partner's decision","A unanimous vote of all partners"],ans:3,exp:"Fundamental changes to the partnership — such as admitting new partners, amending the partnership agreement, or acting outside the ordinary course of business — require UNANIMOUS consent of all partners. Ordinary matters only need a majority vote."},
+  {cat:'ch37',q:"Under UPA default rules, if the partnership agreement is silent on profit sharing, profits are divided:",opts:["Based on each partner's capital contribution","Based on each partner's time worked","Equally among all partners","At the discretion of the managing partner"],ans:2,exp:"Under the UPA default rule, if the partnership agreement does not specify profit distribution, profits are shared EQUALLY among all partners, regardless of capital contributions or time worked."},
+  {cat:'ch37',q:"A partner's duty of care is breached by:",opts:["Simple negligence while managing partnership affairs","Honest errors in judgment in conducting partnership business","Grossly negligent conduct in the partnership's business","Making a business decision that turned out poorly"],ans:2,exp:"The partner's duty of care is limited to refraining from GROSSLY negligent or reckless conduct, intentional misconduct, or knowing violations of law. Partners are NOT liable for simple negligence or honest errors in business judgment."},
+  {cat:'ch37',q:"A partner secretly starts a competing business while still a partner. This is a breach of the duty of:",opts:["Care","Loyalty","Performance","Notification"],ans:1,exp:"The duty of loyalty prohibits partners from competing with the partnership. A partner must account for any benefit derived from partnership business and refrain from dealing with the firm as an adverse party. Competing secretly is a clear breach of loyalty."},
+  {cat:'ch37',q:"If a partner dissociates from a continuing partnership, the partnership must:",opts:["Immediately dissolve","Pay the dissociated partner the buyout price (what they would have received if firm terminated that day)","Force the dissociated partner to remain liable for all future debts","Sue the dissociated partner for breach of contract automatically"],ans:1,exp:"When a partner dissociates and the partnership continues, the partnership must purchase the dissociated partner's interest at the buyout price — generally what that partner would have received if the partnership had terminated on the dissociation date."},
+  {cat:'ch37',q:"Which of the following is true about a partner's liability for partnership debts?",opts:["Liability is limited to each partner's capital contribution","Each partner is liable only for their proportional share","Each partner can be held liable for the full amount of any partnership obligation","Partners are only liable after exhausting partnership assets"],ans:2,exp:"Partners face JOINT liability for partnership debts. Each partner can be held liable for the full amount of any partnership obligation, not just their proportional share. This unlimited personal liability is a major disadvantage of the general partnership form."},
+  // CH38 LLCS
+  {cat:'ch38',q:"In an LLC with no operating agreement, how are profits distributed by default?",opts:["Based on each member's capital contribution","Based on the amount of time each member works","Equally among all members","At the manager's discretion"],ans:2,exp:"Under the default LLC rules (ULLCA), when there is no operating agreement specifying distribution, profits are split EQUALLY among all members — NOT proportional to capital contributions."},
+  {cat:'ch38',q:"The default management structure for an LLC when the articles do not specify otherwise is:",opts:["Manager-managed","Member-managed","Board-managed","Trustee-managed"],ans:1,exp:"Member-managed is the default under ULLCA. Unless the articles of organization specify otherwise, all members participate in management and decisions are made by majority vote."},
+  {cat:'ch38',q:"A member pays personal credit card bills from the LLC's business bank account. This most likely results in:",opts:["A valid business expense deduction","Piercing of the LLC veil, making the member personally liable","A distribution of profits","A legitimate loan from the LLC to the member"],ans:1,exp:"Commingling personal and LLC funds is the most direct trigger for veil piercing. When members treat the LLC's assets as their own, courts can disregard the entity and hold members personally liable."},
+  {cat:'ch38',q:"After a member dissociates from an LLC, which duty continues?",opts:["Duty of loyalty — continues indefinitely","Duty of care — but only for events that occurred before dissociation","Both duties continue indefinitely","Neither duty continues after dissociation"],ans:1,exp:"After dissociation: the duty of LOYALTY terminates, but the duty of CARE continues — but only with respect to events that occurred before the dissociation. The member is no longer bound by loyalty obligations going forward."},
+  {cat:'ch38',q:"When an LLC is dissolved and wound up, in what order are distributions made?",opts:["Equally to all members first, then creditors","Members' capital first, then creditors, then remainder","Creditors first, then return of capital contributions, then remainder distributed equally","Only creditors receive any proceeds"],ans:2,exp:"The winding up distribution order is: (1) creditors paid first (including member-creditors), (2) members' capital contributions returned, (3) remaining amounts distributed equally (or per operating agreement)."},
+  // CH39 CORPORATIONS
+  {cat:'ch39',q:"A shareholder uses the corporation's bank account to pay personal vacation expenses. This most likely results in:",opts:["No legal issue since shareholders own the corporation","A valid personal loan from the corporation","Piercing of the corporate veil","An automatic tax deduction for the corporation"],ans:2,exp:"Using corporate funds for personal expenses is the classic commingling scenario that triggers veil piercing. The court disregards the corporate entity and holds the shareholder personally liable for corporate obligations."},
+  {cat:'ch39',q:"What is the PRIMARY disadvantage of the corporate form compared to an LLC?",opts:["More difficult to form","Unlimited personal liability for shareholders","Double taxation of corporate profits","No ability to raise capital"],ans:2,exp:"Double taxation is the primary disadvantage. Corporations pay tax on profits, and when profits are distributed as dividends to shareholders, shareholders pay personal income tax again. LLCs avoid this with pass-through taxation."},
+  {cat:'ch39',q:"A corporation incorporated in Texas is doing business in California. From California's perspective, the company is:",opts:["A domestic corporation","A foreign corporation","An alien corporation","A public corporation"],ans:1,exp:"A foreign corporation (in the legal sense) is a corporation doing business in a state other than the one where it is incorporated. Texas-incorporated company = foreign corporation in California."},
+  {cat:'ch39',q:"Which of the following is TRUE about common stockholders?",opts:["They receive fixed dividends","They are guaranteed return of their investment","They are the last to receive assets on dissolution","They have no voting rights"],ans:2,exp:"Common stockholders are LAST in priority on dissolution — after bondholders (creditors), preferred stockholders, and all other creditors. They have voting rights (1 per share) but no guaranteed dividends and no guaranteed return."},
+  {cat:'ch39',q:"The internal rules of management adopted by a corporation at its first organizational meeting are called:",opts:["Articles of Incorporation","The corporate charter","Bylaws","Operating agreements"],ans:2,exp:"Bylaws are the internal rules of management adopted at the first organizational meeting. They cover voting requirements, election and replacement of the board, meeting procedures, and other internal governance matters. Articles of Incorporation is the external formation document."},
+  // CH40 DIRECTORS OFFICERS SHAREHOLDERS
+  {cat:'ch40',q:"Which statement about directors of a corporation is CORRECT?",opts:["Directors are agents of the corporation","Each individual director can bind the corporation by their own acts","Directors are not individually agents; they must act as a board","Directors run the day-to-day operations of the company"],ans:2,exp:"Directors are NOT agents. No individual director can bind the corporation alone. They must act collectively as a board. Day-to-day operations are handled by officers, who ARE agents. This is one of the most tested distinctions on the exam."},
+  {cat:'ch40',q:"The business judgment rule protects directors who:",opts:["Always make profitable decisions","Make decisions in good faith, with reasonable investigation, and without personal conflicts","Consult legal counsel before every decision","Have experience in the industry"],ans:1,exp:"BJR protects directors/officers who: (1) took reasonable steps to become informed, (2) had a rational basis for the decision, and (3) had no personal conflict of interest. All three conditions must be met. Courts won't second-guess honest mistakes."},
+  {cat:'ch40',q:"A director discovers an opportunity to acquire a small company that would be a perfect strategic fit for the corporation. Instead of bringing it to the corporation, the director secretly acquires it personally. This violates:",opts:["The business judgment rule","The duty of care","The corporate opportunity doctrine (duty of loyalty)","The inspection rights of shareholders"],ans:2,exp:"The corporate opportunity doctrine is part of the duty of loyalty. Directors and officers cannot take for themselves a business opportunity that belongs to the corporation — they must first offer it to the corporation."},
+  {cat:'ch40',q:"A director has a personal financial stake in a proposed contract that is being considered by the board. Before voting, the director must:",opts:["Do nothing — conflicts are normal in business","Seek CEO approval for the personal interest","Fully disclose the conflict and abstain from voting on the transaction","Resign from the board immediately"],ans:2,exp:"The conflict of interest procedure requires: (1) full disclosure of the nature of the conflict, (2) disclosure of all facts pertinent to the transaction, and (3) abstention from voting. The director cannot simply vote yes or no while hiding the personal interest."},
+  {cat:'ch40',q:"A shareholder brings a derivative suit against a third party who wronged the corporation. If the suit is successful, the damages recovered go to:",opts:["The shareholder personally, in proportion to shares owned","The shareholder who brought the suit as a reward","The corporation's treasury","Split equally between the shareholder and the corporation"],ans:2,exp:"In a derivative suit, the shareholder sues on behalf of the corporation. Any damages recovered go to the CORPORATION's treasury — not to the shareholder personally. The shareholder must also submit a written demand to the board before filing suit."},
+  {cat:'ch40',q:"For a shareholders' meeting to have a valid quorum to conduct business, what percentage of outstanding shares must be present?",opts:["25% or more","A majority — more than 50%","Two-thirds","100% for major decisions"],ans:1,exp:"Generally, a quorum requires shareholders holding MORE THAN 50% of outstanding shares to be present. Once a quorum exists, resolutions pass by majority vote of shares present at the meeting."},
+  {cat:'ch40',q:"Cumulative voting is designed to benefit which group of shareholders?",opts:["Majority shareholders","Institutional investors","Minority shareholders","Preferred shareholders"],ans:2,exp:"Cumulative voting allows minority shareholders to concentrate their votes on one or a few director candidates. Total votes = shares owned × number of directors being elected. This can help minority shareholders get representation on the board when they could not otherwise elect a director."},
+];
+
+let answered=0,correct=0,visibleQuestions=questions;
+
+function buildQuiz(qs){
+  const c=document.getElementById("quiz-container");
+  c.innerHTML="";
+  document.getElementById("score-display").textContent="0";
+  document.getElementById("total-display").textContent="0";
+  answered=0;correct=0;
+  qs.forEach((q,i)=>{
+    const div=document.createElement("div");
+    div.className="quiz-block";
+    div.innerHTML=`<div class="quiz-num">Question ${i+1} of ${qs.length} &middot; ${catLabel(q.cat)}</div><div class="quiz-q">${q.q}</div>${q.opts.map((o,j)=>`<button class="quiz-opt" onclick="answer(this,${i},${j})">${String.fromCharCode(65+j)}. ${o}</button>`).join("")}<div class="quiz-explain" id="exp-${i}">${q.exp}</div>`;
+    c.appendChild(div);
+  });
+}
+
+function catLabel(c){
+  const m={ch31:"Ch 31 Bankruptcy",ch32:"Ch 32 Agency",ch37:"Ch 37 Partnerships",ch38:"Ch 38 LLCs",ch39:"Ch 39 Corporations",ch40:"Ch 40 Directors"};
+  return m[c]||c;
+}
+
+function answer(btn,qi,oi){
+  const block=btn.parentElement;
+  if(block.querySelector(".correct")||block.querySelector(".wrong"))return;
+  answered++;
+  const q=visibleQuestions[qi];
+  if(oi===q.ans){btn.classList.add("correct");correct++;}
+  else{btn.classList.add("wrong");block.querySelectorAll(".quiz-opt")[q.ans].classList.add("correct");}
+  document.getElementById("exp-"+qi).style.display="block";
+  document.getElementById("score-display").textContent=correct;
+  document.getElementById("total-display").textContent=answered;
+}
+
+function filterQuiz(cat,btn){
+  document.querySelectorAll(".filter-btn").forEach(b=>b.classList.remove("active"));
+  btn.classList.add("active");
+  visibleQuestions=cat==="all"?questions:questions.filter(q=>q.cat===cat);
+  buildQuiz(visibleQuestions);
+}
+
+function show(id,btn){
+  document.querySelectorAll(".section").forEach(s=>s.classList.remove("active"));
+  document.querySelectorAll(".nav-btn").forEach(b=>b.classList.remove("active"));
+  document.getElementById("s-"+id).classList.add("active");
+  if(btn)btn.classList.add("active");
+  window.scrollTo(0,0);
+}
+
+function showTab(id,group){
+  document.querySelectorAll(".sub-section").forEach(s=>{if(s.id.startsWith("rc"))s.classList.remove("on");});
+  document.querySelectorAll(".tab-btn").forEach(b=>b.classList.remove("on"));
+  document.getElementById(id).classList.add("on");
+  event.target.classList.add("on");
+}
+
+visibleQuestions=questions;
+buildQuiz(questions);
+</script>
+
+</body>
+</html>
